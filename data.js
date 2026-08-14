@@ -1,11 +1,12 @@
 const PUBLIC_DASHBOARD_DATA={
-  "schemaVersion": "10.9",
-  "generatedAt": "2026-08-14T16:22:54.149Z",
+  "schemaVersion": "11.3",
+  "generatedAt": "2026-08-14T16:47:54.251Z",
   "district": "Northern Lights District",
   "council": "Glacier's Edge Council",
   "summary": {
     "registeredLeaders": 423,
-    "sytPeople": 426
+    "sytPeople": 426,
+    "sytRecords": 517
   },
   "metrics": [
     {
@@ -3310,13 +3311,13 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Crew",
       "unitnumber": "1911",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 5
     },
     {
       "unittype": "Crew",
       "unitnumber": "2047",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 6
     },
     {
@@ -3328,31 +3329,31 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Crew",
       "unitnumber": "2127",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 7
     },
     {
       "unittype": "Crew",
       "unitnumber": "2127",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3005",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 3
     },
     {
       "unittype": "Pack",
       "unitnumber": "3005",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3035",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 13
     },
     {
@@ -3364,31 +3365,37 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Pack",
       "unitnumber": "3035",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3053",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 6
     },
     {
       "unittype": "Pack",
       "unitnumber": "3053",
-      "Status": "Expires ≤ 90 Days",
-      "Count": 2
+      "Status": "Expires 31–60 Days",
+      "Count": 1
+    },
+    {
+      "unittype": "Pack",
+      "unitnumber": "3053",
+      "Status": "Expires 61–90 Days",
+      "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3070",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 10
     },
     {
       "unittype": "Pack",
       "unitnumber": "3076",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 4
     },
     {
@@ -3400,103 +3407,115 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Pack",
       "unitnumber": "3076",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 2
     },
     {
       "unittype": "Pack",
       "unitnumber": "3079",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 11
     },
     {
       "unittype": "Pack",
       "unitnumber": "3088",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 3
     },
     {
       "unittype": "Pack",
       "unitnumber": "3088",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3099",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 6
     },
     {
       "unittype": "Pack",
       "unitnumber": "3099",
-      "Status": "Expires ≤ 90 Days",
-      "Count": 3
+      "Status": "Expires 61–90 Days",
+      "Count": 2
+    },
+    {
+      "unittype": "Pack",
+      "unitnumber": "3099",
+      "Status": "Expires 31–60 Days",
+      "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3127",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 5
     },
     {
       "unittype": "Pack",
       "unitnumber": "3127",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3132",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 7
     },
     {
       "unittype": "Pack",
       "unitnumber": "3132",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3143",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 5
     },
     {
       "unittype": "Pack",
       "unitnumber": "3145",
-      "Status": "Expires ≤ 90 Days",
-      "Count": 3
+      "Status": "Expires 61–90 Days",
+      "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3145",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 6
     },
     {
       "unittype": "Pack",
+      "unitnumber": "3145",
+      "Status": "Expires 31–60 Days",
+      "Count": 2
+    },
+    {
+      "unittype": "Pack",
       "unitnumber": "3146",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 4
     },
     {
       "unittype": "Pack",
       "unitnumber": "3146",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 2
     },
     {
       "unittype": "Pack",
       "unitnumber": "3155",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Pack",
       "unitnumber": "3155",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 6
     },
     {
@@ -3508,7 +3527,7 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Pack",
       "unitnumber": "3161",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 15
     },
     {
@@ -3520,7 +3539,7 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Pack",
       "unitnumber": "3243",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 7
     },
     {
@@ -3532,13 +3551,19 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Pack",
       "unitnumber": "3243",
-      "Status": "Expires ≤ 90 Days",
-      "Count": 3
+      "Status": "Expires 61–90 Days",
+      "Count": 1
+    },
+    {
+      "unittype": "Pack",
+      "unitnumber": "3243",
+      "Status": "Expires 31–60 Days",
+      "Count": 2
     },
     {
       "unittype": "Pack",
       "unitnumber": "3329",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 10
     },
     {
@@ -3550,31 +3575,37 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Pack",
       "unitnumber": "3350",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 9
     },
     {
       "unittype": "Pack",
       "unitnumber": "3350",
-      "Status": "Expires ≤ 90 Days",
-      "Count": 3
+      "Status": "Expires 61–90 Days",
+      "Count": 1
+    },
+    {
+      "unittype": "Pack",
+      "unitnumber": "3350",
+      "Status": "Expires 31–60 Days",
+      "Count": 2
     },
     {
       "unittype": "Pack",
       "unitnumber": "3368",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 10
     },
     {
       "unittype": "Pack",
       "unitnumber": "3377",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 8
     },
     {
       "unittype": "Pack",
       "unitnumber": "3543",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 3
     },
     {
@@ -3586,7 +3617,7 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Troop",
       "unitnumber": "0005",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 3
     },
     {
@@ -3598,25 +3629,25 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Troop",
       "unitnumber": "0029",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 9
     },
     {
       "unittype": "Troop",
       "unitnumber": "0029",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0035",
-      "Status": "Expires ≤ 90 Days",
-      "Count": 3
+      "Status": "Expires 31–60 Days",
+      "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0035",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 15
     },
     {
@@ -3627,74 +3658,86 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "unittype": "Troop",
+      "unitnumber": "0035",
+      "Status": "Expires 61–90 Days",
+      "Count": 2
+    },
+    {
+      "unittype": "Troop",
       "unitnumber": "0047",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 15
     },
     {
       "unittype": "Troop",
       "unitnumber": "0047",
-      "Status": "Expires ≤ 90 Days",
-      "Count": 3
+      "Status": "Expires 61–90 Days",
+      "Count": 2
     },
     {
       "unittype": "Troop",
       "unitnumber": "0047",
       "Status": "Expires ≤ 30 Days",
+      "Count": 1
+    },
+    {
+      "unittype": "Troop",
+      "unitnumber": "0047",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0050",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 14
     },
     {
       "unittype": "Troop",
       "unitnumber": "0050",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0053",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 11
     },
     {
       "unittype": "Troop",
       "unitnumber": "0053",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0066",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 11
     },
     {
       "unittype": "Troop",
       "unitnumber": "0068",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 8
     },
     {
       "unittype": "Troop",
       "unitnumber": "0068",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 2
     },
     {
       "unittype": "Troop",
       "unitnumber": "0070",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 9
     },
     {
       "unittype": "Troop",
       "unitnumber": "0076",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 10
     },
     {
@@ -3706,56 +3749,56 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Troop",
       "unitnumber": "0076",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0088",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 17
     },
     {
       "unittype": "Troop",
       "unitnumber": "0088",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0099",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 8
     },
     {
       "unittype": "Troop",
       "unitnumber": "0113",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 4
     },
     {
       "unittype": "Troop",
       "unitnumber": "0127",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 19
     },
     {
       "unittype": "Troop",
       "unitnumber": "0127",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0132",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 15
     },
     {
       "unittype": "Troop",
       "unitnumber": "0132",
-      "Status": "Expires ≤ 90 Days",
-      "Count": 3
+      "Status": "Expires 61–90 Days",
+      "Count": 1
     },
     {
       "unittype": "Troop",
@@ -3765,50 +3808,56 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "unittype": "Troop",
+      "unitnumber": "0132",
+      "Status": "Expires 31–60 Days",
+      "Count": 2
+    },
+    {
+      "unittype": "Troop",
       "unitnumber": "0145",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 6
     },
     {
       "unittype": "Troop",
       "unitnumber": "0146",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 5
     },
     {
       "unittype": "Troop",
       "unitnumber": "0146",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0155",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 22
     },
     {
       "unittype": "Troop",
       "unitnumber": "0155",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 31–60 Days",
       "Count": 2
     },
     {
       "unittype": "Troop",
       "unitnumber": "0164",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 11
     },
     {
       "unittype": "Troop",
       "unitnumber": "0164",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0167",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 16
     },
     {
@@ -3820,31 +3869,31 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Troop",
       "unitnumber": "0168",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 21
     },
     {
       "unittype": "Troop",
       "unitnumber": "0168",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
       "unittype": "Troop",
       "unitnumber": "0333",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 18
     },
     {
       "unittype": "Troop",
       "unitnumber": "0333",
-      "Status": "Expires ≤ 90 Days",
+      "Status": "Expires 61–90 Days",
       "Count": 2
     },
     {
       "unittype": "Troop",
       "unitnumber": "7066",
-      "Status": "Current",
+      "Status": "Current >90 Days",
       "Count": 9
     }
   ],

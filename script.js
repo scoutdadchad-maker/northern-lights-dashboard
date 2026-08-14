@@ -176,12 +176,12 @@ function renderMetricBreakdown(){
 }
 function renderSytBands(){
  if(!$("sytBands"))return;let a=scope(syt.filter(x=>x.key&&x.type));
- let current=a.filter(x=>yes(x.current)&&!(x.daysRemaining!==null&&x.daysRemaining<=90)).length,
- d6190=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=61&&x.daysRemaining<=90).length,
- d3160=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=31&&x.daysRemaining<=60).length,
- d30=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length,
+ let current=a.filter(x=>yes(x.current)&&(x.daysRemaining===null||x.daysRemaining>90)).length,
+ d6190=a.filter(x=>yes(x.current)&&x.daysRemaining!==null&&x.daysRemaining>=61&&x.daysRemaining<=90).length,
+ d3160=a.filter(x=>yes(x.current)&&x.daysRemaining!==null&&x.daysRemaining>=31&&x.daysRemaining<=60).length,
+ d30=a.filter(x=>yes(x.current)&&x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length,
  expired=a.filter(x=>!yes(x.current)||x.daysRemaining<0).length;
- $("sytBands").innerHTML=[["Current",current,"good"],["61–90 Days",d6190,""],["31–60 Days",d3160,"warn"],["≤30 Days",d30,"bad"],["Expired / Not Current",expired,"bad"]].map(x=>`<div class="band ${x[2]}"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("")
+ $("sytBands").innerHTML=[["Current >90 Days",current,"good"],["61–90 Days",d6190,"warn"],["31–60 Days",d3160,"warn"],["≤30 Days",d30,"bad"],["Expired / Not Current",expired,"bad"]].map(x=>`<div class="band ${x[2]}"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("")
 }
 function renderCharterBands(){
  if(!$("charterBands"))return;let a=scope(charters);
@@ -377,7 +377,7 @@ $("untrainedDirectBtn").onclick=()=>{$("trainingFilter").value="untrained-direct
 
 function renderSyt(){
  if(!syt.length)return;let base=scope(syt.filter(x=>selectedUnit?x.key===selectedUnit:true)),people=new Set(base.map(x=>x.member).filter(Boolean)),unitAssigned=base.filter(x=>x.type&&x.number);
- $("sPeople").textContent=people.size;$("sCurrent").textContent=base.length?rate(base,x=>yes(x.current))+"%":"—";$("s90").textContent=base.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=90).length;$("s30").textContent=base.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length;$("sExpired").textContent=base.filter(x=>!yes(x.current)||x.daysRemaining<0).length;$("sUnitPeople").textContent=unitAssigned.length;
+ $("sPeople").textContent=people.size;$("sCurrent").textContent=base.length?rate(base,x=>yes(x.current))+"%":"—";$("s90").textContent=base.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=90).length;$("s30").textContent=base.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length;$("sExpired").textContent=base.filter(x=>!yes(x.current)||x.daysRemaining<0).length;$("sUnitPeople").textContent=base.length;
  let mode=$("sytFilter").value,q=$("sytSearch").value.toLowerCase(),a=base;
  if(mode==="expired")a=a.filter(x=>!yes(x.current)||x.daysRemaining<0);
  if(mode==="30")a=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30);
@@ -432,15 +432,16 @@ function markViewerSourcesLoaded(){
 // ---------- Sanitized Viewer Data Loader ----------
 let viewerTrainingRows=[];
 let viewerSytRows=[];
-let viewerSummary={registeredLeaders:null,sytPeople:null};
-let exactPublishedSummary={registeredLeaders:null,sytPeople:null};
+let viewerSummary={registeredLeaders:null,sytPeople:null,sytRecords:null};
+let exactPublishedSummary={registeredLeaders:null,sytPeople:null,sytRecords:null};
 
 if(typeof PUBLIC_DASHBOARD_DATA!=="undefined"){
   try{
     if(PUBLIC_DASHBOARD_DATA.summary){
       exactPublishedSummary={
         registeredLeaders:Number(PUBLIC_DASHBOARD_DATA.summary.registeredLeaders),
-        sytPeople:Number(PUBLIC_DASHBOARD_DATA.summary.sytPeople)
+        sytPeople:Number(PUBLIC_DASHBOARD_DATA.summary.sytPeople),
+        sytRecords:Number(PUBLIC_DASHBOARD_DATA.summary.sytRecords)
       };
       viewerSummary={...exactPublishedSummary};
     }
@@ -483,6 +484,8 @@ if(typeof PUBLIC_DASHBOARD_DATA!=="undefined"){
         expires:"",daysRemaining:
           r.status==="Expired / Not Current"?-1:
           r.status==="Expires ≤ 30 Days"?30:
+          r.status==="Expires 31–60 Days"?60:
+          r.status==="Expires 61–90 Days"?90:
           r.status==="Expires ≤ 90 Days"?90:365,
         regExpires:""
       });
@@ -652,8 +655,14 @@ function renderViewerSafePeopleCounts(){
       let v=exactPublishedSummary.sytPeople;
       $("sPeople").textContent=Number.isFinite(v)?v:"—";
       let label=$("sPeople").nextElementSibling;
-      if(label)label.textContent="Total Available SYT People";
+      if(label)label.textContent="Unique Registered People";
     }
+  }
+  if($("sUnitPeople") && !selectedUnit){
+    let r=exactPublishedSummary.sytRecords;
+    $("sUnitPeople").textContent=Number.isFinite(r)?r:"—";
+    let label=$("sUnitPeople").nextElementSibling;
+    if(label)label.textContent="SYT Registration Records";
   }
 }
 
@@ -677,54 +686,75 @@ window.addEventListener("load",()=>{
   renderViewerSafePeopleCounts();
 });
 
-if(typeof PUBLIC_DASHBOARD_DATA!=="undefined" && PUBLIC_DASHBOARD_DATA.summary){
-  console.info("Viewer published counts:", PUBLIC_DASHBOARD_DATA.summary);
-}
 
-function validatePublishedSummary(){
-  if(typeof PUBLIC_DASHBOARD_DATA==="undefined"){
-    console.error("Viewer data.js did not load.");
-    return false;
-  }
-  const summary=PUBLIC_DASHBOARD_DATA.summary;
-  const validSummary=summary &&
-    Number.isFinite(Number(summary.registeredLeaders)) &&
-    Number.isFinite(Number(summary.sytPeople));
-  if(!validSummary){
-    console.error("Viewer data.js is missing valid registeredLeaders/sytPeople summary fields.");
-    return false;
-  }
-  console.info("Viewer data loaded:", {
-    schemaVersion:PUBLIC_DASHBOARD_DATA.schemaVersion||"legacy",
-    generatedAt:PUBLIC_DASHBOARD_DATA.generatedAt||"unknown",
-    registeredLeaders:Number(summary.registeredLeaders),
-    sytPeople:Number(summary.sytPeople)
-  });
-  return true;
-}
-window.addEventListener("DOMContentLoaded",validatePublishedSummary);
+
+
+
 window.addEventListener("load",()=>{
   renderViewerSafePeopleCounts();
   setTimeout(renderViewerSafePeopleCounts,0);
 });
 
-window.addEventListener("DOMContentLoaded",()=>{
-  const w=document.getElementById("dataVersionWarning");
-  if(w){
-    const ok=validatePublishedSummary();
-    w.hidden=ok;
-    if(!ok)w.textContent="Viewer data.js is missing the required published summary values. Generate a new data.js from the current Admin dashboard.";
-  }
-});
 
-window.addEventListener("DOMContentLoaded",()=>{
-  const s=document.getElementById("viewerDataStatus");
-  if(!s)return;
-  if(typeof PUBLIC_DASHBOARD_DATA!=="undefined" && PUBLIC_DASHBOARD_DATA.summary){
-    const sv=PUBLIC_DASHBOARD_DATA.schemaVersion||"legacy";
-    const dt=PUBLIC_DASHBOARD_DATA.generatedAt?new Date(PUBLIC_DASHBOARD_DATA.generatedAt).toLocaleString():"unknown time";
-    s.textContent=`Viewer data ${sv} • ${dt}`;
-  }else{
-    s.textContent="Viewer data not loaded";
+
+
+
+
+
+
+
+
+
+// ---------- Viewer Published Data State ----------
+function hasPublishedViewerData(){
+  if(typeof PUBLIC_DASHBOARD_DATA==="undefined") return false;
+  if(PUBLIC_DASHBOARD_DATA.placeholder===true) return false;
+  return ["metrics","training","syt","charter"].some(k =>
+    Array.isArray(PUBLIC_DASHBOARD_DATA[k]) && PUBLIC_DASHBOARD_DATA[k].length>0
+  );
+}
+
+function publishedSummaryIsValid(){
+  if(!hasPublishedViewerData()) return true;
+  const summary=PUBLIC_DASHBOARD_DATA.summary;
+  return !!summary &&
+    Number.isFinite(Number(summary.registeredLeaders)) &&
+    Number.isFinite(Number(summary.sytPeople)) &&
+    Number.isFinite(Number(summary.sytRecords));
+}
+
+function updateViewerDataState(){
+  const warning=document.getElementById("dataVersionWarning");
+  const status=document.getElementById("viewerDataStatus");
+
+  // Empty packaged Viewer / placeholder data.js is a normal state.
+  if(!hasPublishedViewerData()){
+    if(warning) warning.hidden=true;
+    if(status) status.textContent="No published Viewer data loaded";
+    return;
   }
-});
+
+  const valid=publishedSummaryIsValid();
+
+  if(warning){
+    warning.hidden=valid;
+    if(!valid){
+      warning.textContent="Published Viewer data is missing required summary values. Generate a new data.js from the current Admin dashboard.";
+    }
+  }
+
+  if(status){
+    if(valid){
+      const version=PUBLIC_DASHBOARD_DATA.schemaVersion||"legacy";
+      const generated=PUBLIC_DASHBOARD_DATA.generatedAt
+        ? new Date(PUBLIC_DASHBOARD_DATA.generatedAt).toLocaleString()
+        : "unknown time";
+      status.textContent=`Viewer data ${version} • ${generated}`;
+    }else{
+      status.textContent="Viewer data requires regeneration";
+    }
+  }
+}
+
+window.addEventListener("DOMContentLoaded",updateViewerDataState);
+window.addEventListener("load",updateViewerDataState);
