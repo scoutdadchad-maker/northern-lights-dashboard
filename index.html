@@ -82,7 +82,8 @@
         <div class="kpi"><b id="ovRenewal">0%</b><span>Renewal Posted / Current</span></div>
       </div>
 
-      <div class="grid2">
+      <section class="card"><div class="eyebrow">Core Unit Metrics</div><h3 class="health-indicator-title">District / Unit Health Indicators</h3><div id="overviewMetricHealthIndicators" class="health-grid"></div></section>
+<div class="grid2">
         <section class="card"><div class="eyebrow">Combined Signals</div><h3>District Support Snapshot</h3><div id="overviewBars" class="bars"></div></section>
         <section class="card"><div class="eyebrow">Attention</div><h3>Priority Indicators</h3><div id="overviewPriorities"></div></section>
       </div>
@@ -107,11 +108,12 @@
           <div class="kpi"><b id="mStale">0</b><span>Contact &gt; 90 Days</span></div>
           <div class="kpi"><b id="mDecline">0</b><span>Membership Decline</span></div>
         </div>
-        <section class="card">
+        <section class="card"><div class="eyebrow">Five Commissioner Tools Metrics</div><h3 class="health-indicator-title">Metric Health Indicators</h3><div id="unitMetricHealthIndicators" class="health-grid"></div></section>
+<section class="card">
           <div class="section-head"><div><div class="eyebrow">Unit Metrics Snapshot</div><h3>Unit Health Dashboard</h3></div>
             <div class="filters"><select id="metricHealth"><option value="">All health</option><option>Green</option><option>Yellow</option><option>Red</option></select><input id="metricSearch" type="search" placeholder="Search units..."></div>
           </div>
-          <div id="metricBreakdown" class="metric-breakdown"></div><div class="tablewrap"><table>
+          <div class="sanitized-note">Viewer uses published unit-level metric flags for these indicators; no person-level information is required.</div><div id="metricBreakdown" class="metric-breakdown"></div><div class="tablewrap"><table>
             <thead><tr><th>Health</th><th>Unit</th><th>Metrics</th><th>Youth</th><th>YOY</th><th>Retention</th><th>Last Connection</th><th>Assigned Commissioners</th></tr></thead>
             <tbody id="metricRows"></tbody>
           </table></div>
@@ -131,7 +133,8 @@
           <div class="kpi red"><b id="tUntrainedDirect">0</b><span>Untrained Direct Contact</span></div>
         </div>
 
-        <div class="grid2">
+        <section class="card"><div class="eyebrow">Training Health</div><h3 class="health-indicator-title">Training Indicators</h3><div id="trainingHealthIndicators" class="health-grid"></div></section>
+<div class="grid2">
           <section class="card"><div class="eyebrow">Program</div><h3>Direct Contact Training</h3><div id="trainingBars" class="bars"></div></section>
           <section class="card"><div class="eyebrow">Unit Gaps</div><h3>Units Needing Training Support</h3><div id="trainingPriorities"></div></section>
         </div>
@@ -170,7 +173,8 @@
           <div class="kpi"><b id="sUnitPeople">0</b><span>Unit-Assigned Records</span></div>
         </div>
 
-        <section class="card"><div id="sytBands" class="aging-bands"></div>
+        <section class="card"><div class="eyebrow">SYT Health</div><h3 class="health-indicator-title">Safeguarding Youth Indicators</h3><div id="sytHealthIndicators" class="health-grid"></div></section>
+<section class="card"><div id="sytBands" class="aging-bands"></div>
           <div class="section-head"><div><div class="eyebrow">Safeguarding Youth</div><h3>Training Aging Dashboard</h3></div>
             <div class="filters"><select id="sytFilter"><option value="">All statuses</option><option value="expired">Expired / Not Current</option><option value="30">Expires ≤ 30 Days</option><option value="90">Expires ≤ 90 Days</option><option value="current">Current</option></select><input id="sytSearch" type="search" placeholder="Search leader or position..."></div>
           </div>
@@ -194,7 +198,8 @@
           <div class="kpi red"><b id="c30">0</b><span>Expires ≤ 30 Days</span></div>
         </div>
 
-        <section class="card"><div id="charterBands" class="aging-bands"></div>
+        <section class="card"><div class="eyebrow">Renewal Health</div><h3 class="health-indicator-title">Charter Renewal Indicators</h3><div id="charterHealthIndicators" class="health-grid"></div></section>
+<section class="card"><div id="charterBands" class="aging-bands"></div>
           <div class="section-head"><div><div class="eyebrow">Charter Renewal</div><h3>Unit Renewal Dashboard</h3></div>
             <div class="filters"><select id="charterFilter"><option value="">All statuses</option><option value="Posted">Posted</option><option value="pending">Pending / other</option><option value="new">New Unit</option></select><input id="charterSearch" type="search" placeholder="Search unit or chartered org..."></div>
           </div>

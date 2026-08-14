@@ -117,7 +117,7 @@ function updateSourceStatus(){
 function refresh(){
  populateUnitSelector();updateSourceStatus();updateEmpty();if(metrics.length||leaders.length||syt.length||charters.length){showView(activeView);$("metaDate").textContent=metaDates.length?`Latest report: ${metaDates[metaDates.length-1]}`:"";renderAll()}
 }
-function renderAll(){renderOverview();renderMetrics();renderTraining();renderSyt();renderCharter();renderUnitProfile();renderMetricBreakdown();renderSytBands();renderCharterBands()}
+function renderAll(){renderOverview();renderMetrics();renderTraining();renderSyt();renderCharter();renderUnitProfile();renderMetricBreakdown();renderSytBands();renderCharterBands();renderOverviewMetricHealthIndicators();renderUnitMetricHealthIndicators();renderTrainingHealthIndicators();renderSytHealthIndicators();renderCharterHealthIndicators()}
 
 function trainingUnitSummary(){
  let m=new Map();activeOnly(leaders).filter(x=>x.key).forEach(x=>{if(!m.has(x.key))m.set(x.key,{direct:0,trained:0,total:0});let z=m.get(x.key);z.total++;if(yes(x.direct)){z.direct++;if(yes(x.trained))z.trained++}});return m
@@ -181,6 +181,129 @@ function renderCharterBands(){
  d30=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length,
  past=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining<0).length;
  $("charterBands").innerHTML=[["Posted",posted,"good"],["61–90 Days",d6190,""],["31–60 Days",d3160,"warn"],["≤30 Days",d30,"bad"],["Past Due",past,"bad"]].map(x=>`<div class="band ${x[2]}"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("")
+}
+
+
+function pctStatus(p, greenMin=75, yellowMin=50){
+ if(p===null||p===undefined||Number.isNaN(p))return "Unknown";
+ if(p>=greenMin)return "Green";
+ if(p>=yellowMin)return "Yellow";
+ return "Red";
+}
+function inversePctStatus(p, greenMax=10, yellowMax=25){
+ if(p===null||p===undefined||Number.isNaN(p))return "Unknown";
+ if(p<=greenMax)return "Green";
+ if(p<=yellowMax)return "Yellow";
+ return "Red";
+}
+function renderHealthCards(targetId,cards){
+ let el=$(targetId); if(!el)return;
+ el.innerHTML=cards.map(c=>`<div class="health-card ${c.status}">
+   <div class="hc-head"><span class="hc-name">${c.name}</span><i class="hc-dot"></i></div>
+   <div class="hc-value">${c.value}</div>
+   <div class="hc-sub">${c.sub||""}</div>
+ </div>`).join("");
+}
+function metricSignalForUnit(u,keyName){
+ let raw=u?u[keyName]:null;
+ if(raw===undefined||raw===null||raw==="")return {status:"Unknown",value:"—",sub:"Not available"};
+ let ok=yes(raw); return {status:ok?"Green":"Red",value:ok?"Met":"Not Met",sub:"Commissioner Tools metric"};
+}
+function renderUnitMetricHealthIndicators(){
+ let a=scope(metrics);
+ let defs=[["Leader Training","mTraining"],["Unit Size","mSize"],["YOY Growth","mGrowth"],["Advancement","mAdv"],["Outdoor","mOutdoor"]];
+ if(selectedUnit){
+   let u=a[0];
+   renderHealthCards("unitMetricHealthIndicators",defs.map(([name,k])=>({name,...metricSignalForUnit(u,k)})));
+ }else{
+   renderHealthCards("unitMetricHealthIndicators",defs.map(([name,k])=>{
+     let avail=a.filter(x=>x[k]!==undefined&&x[k]!==null&&x[k]!=="");
+     if(!avail.length)return {name,status:"Unknown",value:"—",sub:"Not available"};
+     let met=avail.filter(x=>yes(x[k])).length,p=Math.round(met/avail.length*100);
+     return {name,status:pctStatus(p,75,50),value:`${p}%`,sub:`${met}/${avail.length} units met`}
+   }));
+ }
+}
+function renderOverviewMetricHealthIndicators(){
+ let a=scope(metrics);
+ let defs=[["Leader Training","mTraining"],["Unit Size","mSize"],["YOY Growth","mGrowth"],["Advancement","mAdv"],["Outdoor","mOutdoor"]];
+ let cards=defs.map(([name,k])=>{
+   if(selectedUnit){
+     let u=a[0]; return {name,...metricSignalForUnit(u,k)}
+   }
+   let avail=a.filter(x=>x[k]!==undefined&&x[k]!==null&&x[k]!=="");
+   if(!avail.length)return {name,status:"Unknown",value:"—",sub:"Not available"};
+   let met=avail.filter(x=>yes(x[k])).length,p=Math.round(met/avail.length*100);
+   return {name,status:pctStatus(p,75,50),value:`${p}%`,sub:`${met}/${avail.length} units met`}
+ });
+ renderHealthCards("overviewMetricHealthIndicators",cards);
+}
+function renderTrainingHealthIndicators(){
+ let a=scope(leaders.filter(x=>x.key)), direct=a.filter(x=>yes(x.direct));
+ let allPct=a.length?Math.round(a.filter(x=>yes(x.trained)).length/a.length*100):null;
+ let directPct=direct.length?Math.round(direct.filter(x=>yes(x.trained)).length/direct.length*100):null;
+ let gaps=trainingUnitSummary(), gapUnits=[...gaps.values()].filter(x=>x.direct>x.trained).length;
+ let gapPct=unitCatalog().length?Math.round(gapUnits/unitCatalog().length*100):null;
+ renderHealthCards("trainingHealthIndicators",[
+   {name:"All Positions Trained",status:pctStatus(allPct,85,70),value:allPct===null?"—":allPct+"%",sub:a.length?`${a.filter(x=>yes(x.trained)).length}/${a.length} trained`:"No data"},
+   {name:"Direct Contact Trained",status:pctStatus(directPct,90,75),value:directPct===null?"—":directPct+"%",sub:direct.length?`${direct.filter(x=>yes(x.trained)).length}/${direct.length} trained`:"No data"},
+   {name:"Units With Training Gaps",status:inversePctStatus(gapPct,10,25),value:selectedUnit?(direct.length&&direct.some(x=>!yes(x.trained))?"Gap":"No Gap"):gapUnits,sub:selectedUnit?"Selected unit":"District units with gaps"}
+ ]);
+}
+function renderSytHealthIndicators(){
+ let a=scope(syt.filter(x=>x.key&&x.type));
+ let current=a.filter(x=>yes(x.current)).length;
+ let exp30=a.filter(x=>yes(x.current)&&x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length;
+ let exp3190=a.filter(x=>yes(x.current)&&x.daysRemaining!==null&&x.daysRemaining>=31&&x.daysRemaining<=90).length;
+ let expired=a.filter(x=>!yes(x.current)||x.daysRemaining<0).length;
+ let currentPct=a.length?Math.round(current/a.length*100):null;
+
+ // Risk-based colors:
+ // Current: 100%=green, 95-99%=yellow, <95%=red
+ // <=30 days: any record = red
+ // 31-90 days: any record = yellow
+ // Expired/not current: any record = red
+ let currentStatus=currentPct===null?"Unknown":currentPct===100?"Green":currentPct>=95?"Yellow":"Red";
+ let exp30Status=!a.length?"Unknown":exp30===0?"Green":"Red";
+ let exp3190Status=!a.length?"Unknown":exp3190===0?"Green":"Yellow";
+ let expiredStatus=!a.length?"Unknown":expired===0?"Green":"Red";
+
+ renderHealthCards("sytHealthIndicators",[
+   {name:"SYT Current",status:currentStatus,value:currentPct===null?"—":currentPct+"%",sub:a.length?`${current}/${a.length} current`:"No data"},
+   {name:"Expires ≤30 Days",status:exp30Status,value:exp30,sub:exp30===0?"No urgent expirations":"Immediate renewal attention"},
+   {name:"Expires 31–90 Days",status:exp3190Status,value:exp3190,sub:exp3190===0?"No upcoming expirations":"Plan renewal follow-up"},
+   {name:"Expired / Not Current",status:expiredStatus,value:expired,sub:expired===0?"None":"Immediate attention required"}
+ ]);
+}
+function renderCharterHealthIndicators(){
+ let a=scope(charters);
+
+ function posted(x){return clean(x.status).toLowerCase()==="posted"}
+ function isNew(x){return clean(x.newStatus).toLowerCase().includes("new")}
+ function needsRenewal(x){return !posted(x)&&!isNew(x)}
+
+ let postedCount=a.filter(posted).length;
+ let currentNotDue=a.filter(x=>needsRenewal(x)&&x.daysRemaining!==null&&x.daysRemaining>90).length;
+ let d6190=a.filter(x=>needsRenewal(x)&&x.daysRemaining!==null&&x.daysRemaining>=61&&x.daysRemaining<=90).length;
+ let d3160=a.filter(x=>needsRenewal(x)&&x.daysRemaining!==null&&x.daysRemaining>=31&&x.daysRemaining<=60).length;
+ let d30=a.filter(x=>needsRenewal(x)&&x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length;
+ let past=a.filter(x=>needsRenewal(x)&&x.daysRemaining!==null&&x.daysRemaining<0).length;
+
+ // Overall readiness for selected scope.
+ // Any past-due or <=30 day unresolved unit => red.
+ // Otherwise any unresolved 31-90 day unit => yellow.
+ // Otherwise green.
+ let overallStatus=!a.length?"Unknown":(past>0||d30>0)?"Red":(d3160>0||d6190>0)?"Yellow":"Green";
+ let readyCount=postedCount+currentNotDue+a.filter(isNew).length;
+ let readyPct=a.length?Math.round(readyCount/a.length*100):null;
+
+ renderHealthCards("charterHealthIndicators",[
+   {name:"Renewal Readiness",status:overallStatus,value:readyPct===null?"—":readyPct+"%",sub:a.length?`${readyCount}/${a.length} posted, new, or >90 days out`:"No data"},
+   {name:"61–90 Days",status:!a.length?"Unknown":d6190===0?"Green":"Yellow",value:d6190,sub:d6190===0?"No units in warning window":"Renewal planning window"},
+   {name:"31–60 Days",status:!a.length?"Unknown":d3160===0?"Green":"Yellow",value:d3160,sub:d3160===0?"No units in warning window":"Renewal follow-up needed"},
+   {name:"Expires ≤30 Days",status:!a.length?"Unknown":d30===0?"Green":"Red",value:d30,sub:d30===0?"No urgent renewals":"Immediate attention required"},
+   {name:"Past Due",status:!a.length?"Unknown":past===0?"Green":"Red",value:past,sub:past===0?"None":"Immediate attention required"}
+ ]);
 }
 
 function renderOverview(){
@@ -307,6 +430,7 @@ if(typeof PUBLIC_DASHBOARD_DATA!=="undefined"){
     viewerTrainingRows=(PUBLIC_DASHBOARD_DATA.training||[]).map(r=>({
       key:keyFromUnitLabel(r.Unit),
       unit:r.Unit,
+      program:r.Program||"Other",
       position:r.Position||"Unit Position",
       direct:r.Direct_Contact_Leader,
       trained:r.Trained,
@@ -327,7 +451,7 @@ if(typeof PUBLIC_DASHBOARD_DATA!=="undefined"){
       for(let i=0;i<r.count;i++) leaders.push({
         key:r.key,unit:r.unit,first:"",last:"",member:"",
         position:r.position,direct:r.direct,trained:r.trained,
-        expires:"",mandatory:"",classroom:"",online:"",program:""
+        expires:"",mandatory:"",classroom:"",online:"",program:r.program||"Other"
       });
     });
 
@@ -424,4 +548,57 @@ renderAll = function(){
 window.addEventListener("DOMContentLoaded",()=>{
  const b=document.getElementById("needsAttentionBtn");
  if(b&&!b.dataset.bound){b.dataset.bound="1";b.addEventListener("click",()=>{attentionOnly=!attentionOnly;b.classList.toggle("active",attentionOnly);renderAll()})}
+});
+
+
+function renderViewerDirectContactChart(){
+  if(typeof viewerTrainingRows==="undefined" || !viewerTrainingRows.length)return;
+  let rows=viewerTrainingRows.filter(r=>yes(r.direct)&&(!selectedUnit||r.key===selectedUnit));
+  let programs=[...new Set(rows.map(r=>r.program||"Other"))].sort();
+
+  if(!programs.length){
+    $("trainingBars").innerHTML='<div class="sub">No published direct-contact training summary for this selection.</div>';
+    return;
+  }
+
+  $("trainingBars").innerHTML=programs.map(p=>{
+    let z=rows.filter(r=>(r.program||"Other")===p),
+        total=z.reduce((s,r)=>s+r.count,0),
+        trained=z.filter(r=>yes(r.trained)).reduce((s,r)=>s+r.count,0),
+        pct=total?Math.round(trained/total*100):0;
+    return `<div class="barrow">
+      <span>${esc(p)}</span>
+      <div class="track"><div class="fill" style="width:${pct}%"></div></div>
+      <b>${trained}/${total} • ${pct}%</b>
+    </div>`;
+  }).join("");
+}
+
+function renderViewerTrainingPriorities(){
+  if(typeof viewerTrainingRows==="undefined" || !viewerTrainingRows.length)return;
+  let by=new Map();
+  viewerTrainingRows.filter(r=>yes(r.direct)&&(!selectedUnit||r.key===selectedUnit)).forEach(r=>{
+    if(!by.has(r.key))by.set(r.key,{label:r.unit,total:0,trained:0});
+    let z=by.get(r.key); z.total+=r.count; if(yes(r.trained))z.trained+=r.count;
+  });
+  let gaps=[...by.values()].filter(x=>x.trained<x.total).sort((a,b)=>(a.trained/a.total)-(b.trained/b.total));
+  $("trainingPriorities").innerHTML=gaps.length
+    ? gaps.slice(0,10).map(x=>`<div class="priority"><b>${esc(x.label)}</b><span>${x.trained}/${x.total} direct contact trained</span></div>`).join("")
+    : '<div class="priority"><b>No published direct-contact training gaps</b><span>All summarized units are fully trained</span></div>';
+}
+
+
+const _v103RenderAll = renderAll;
+renderAll = function(){
+  _v103RenderAll();
+  if(typeof renderViewerDirectContactChart==="function")renderViewerDirectContactChart();
+  if(typeof renderViewerTrainingPriorities==="function")renderViewerTrainingPriorities();
+};
+
+window.addEventListener("DOMContentLoaded",()=>{
+  const unitSel=document.getElementById("globalUnitSelect");
+  if(unitSel)unitSel.addEventListener("change",()=>{
+    renderViewerDirectContactChart();
+    renderViewerTrainingPriorities();
+  });
 });

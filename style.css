@@ -25,3 +25,18 @@
 .privacy-value{color:var(--muted);font-style:italic}
 @media(max-width:1100px){.profile-grid{grid-template-columns:repeat(3,1fr)}.aging-bands{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:650px){.profile-grid,.metric-breakdown,.aging-bands{grid-template-columns:1fr}}
+
+.health-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:9px;margin:14px 0}
+.health-card{border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.025)}
+.health-card .hc-head{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.health-card .hc-name{font-weight:850;font-size:.86rem}
+.health-card .hc-dot{width:11px;height:11px;border-radius:50%;box-shadow:0 0 0 4px rgba(255,255,255,.03)}
+.health-card .hc-value{font-size:1.35rem;font-weight:900;margin-top:8px}
+.health-card .hc-sub{font-size:.72rem;color:var(--muted);margin-top:3px}
+.health-card.Green{border-color:rgba(54,202,120,.36)}.health-card.Green .hc-dot{background:var(--green)}.health-card.Green .hc-value{color:var(--green)}
+.health-card.Yellow{border-color:rgba(239,196,77,.36)}.health-card.Yellow .hc-dot{background:var(--yellow)}.health-card.Yellow .hc-value{color:var(--yellow)}
+.health-card.Red{border-color:rgba(239,102,97,.36)}.health-card.Red .hc-dot{background:var(--red)}.health-card.Red .hc-value{color:var(--red)}
+.health-card.Unknown .hc-dot{background:var(--muted)}
+.health-indicator-title{margin:8px 0 4px}
+
+.sanitized-note{font-size:.74rem;color:var(--muted);margin:8px 0 2px}
