@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glacier's Edge — Northern Lights District Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="viewer-badge">VIEW ONLY</div><div class="brand">
+      <div class="eyebrow">Glacier's Edge Council</div>
+      <h1>Northern Lights</h1>
+      <p>District Dashboard</p>
+    </div>
+
+    <nav>
+      <button class="nav active" data-view="overview"><span class="navicon">◫</span><span><b>Overview</b><small>All data together</small></span></button>
+      <button class="nav" data-view="metrics"><span class="navicon">◎</span><span><b>Unit Metrics</b><small>Health & support</small></span></button>
+      <button class="nav" data-view="training"><span class="navicon">✓</span><span><b>Trained Leaders</b><small>Leader training</small></span></button>
+      <button class="nav" data-view="syt"><span class="navicon">◇</span><span><b>Safeguarding Youth</b><small>SYT status</small></span></button>
+      <button class="nav" data-view="charter"><span class="navicon">↻</span><span><b>Charter Renewal</b><small>Renewal status</small></span></button>
+    </nav>
+
+    <div class="file-panel viewer-hidden">
+      <div class="file-title">Data Sources</div>
+      <label class="filebox"><span><b>Unit Metrics</b><small id="metricsFileStatus">Not loaded</small></span><input id="metricsFile" type="file" accept=".csv,text/csv"><i>Upload</i></label>
+      <label class="filebox"><span><b>Trained Leaders</b><small id="trainingFileStatus">Not loaded</small></span><input id="trainingFile" type="file" accept=".csv,text/csv"><i>Upload</i></label>
+      <label class="filebox"><span><b>Safeguarding Youth</b><small id="sytFileStatus">Not loaded</small></span><input id="sytFile" type="file" accept=".csv,text/csv"><i>Upload</i></label>
+      <label class="filebox"><span><b>Charter Renewal</b><small id="charterFileStatus">Not loaded</small></span><input id="charterFile" type="file" accept=".csv,text/csv"><i>Upload</i></label>
+    </div>
+
+    <div class="privacy">🔒 View-only mode • Data source controls are disabled.</div>
+  </aside>
+
+  <main class="main"><div class="readonly-notice">View-only mode: data-source uploads and administrative controls are disabled.</div>
+    <header class="topbar">
+      <div>
+        <div id="viewEyebrow" class="eyebrow">Combined Dashboard</div>
+        <h2 id="viewTitle">District Overview</h2>
+      </div>
+      <div class="top-controls">
+        <label class="unit-select-label">Unit Selector
+          <select id="globalUnitSelect"><option value="">All Units</option></select>
+        </label>
+        <div id="unitIndicator" class="unit-indicator">All Units</div>
+      </div>
+    </header>
+
+    <div class="meta"><span>Glacier's Edge Council</span><span>Northern Lights District</span><span id="metaDate"></span></div>
+
+    <section id="emptyState" class="empty card">
+      <div class="empty-icon">◫</div>
+      <h2>Load one or more Northern Lights reports</h2>
+      <p>Each dashboard can operate independently. Load all four reports to unlock the complete combined Overview.</p>
+    </section>
+
+    <section id="overviewView" class="view" hidden>
+      <div class="kpis">
+        <div class="kpi"><b id="ovUnits">0</b><span>Units in View</span></div>
+        <div class="kpi"><b id="ovYouth">0</b><span>Youth Served</span></div>
+        <div class="kpi green"><b id="ovGreen">0%</b><span>Green Unit Health</span></div>
+        <div class="kpi"><b id="ovTraining">0%</b><span>Direct Leaders Trained</span></div>
+        <div class="kpi"><b id="ovSyt">0%</b><span>SYT Current</span></div>
+        <div class="kpi"><b id="ovRenewal">0%</b><span>Renewal Posted / Current</span></div>
+      </div>
+
+      <div class="grid2">
+        <section class="card"><div class="eyebrow">Combined Signals</div><h3>District Support Snapshot</h3><div id="overviewBars" class="bars"></div></section>
+        <section class="card"><div class="eyebrow">Attention</div><h3>Priority Indicators</h3><div id="overviewPriorities"></div></section>
+      </div>
+
+      <section class="card">
+        <div class="section-head"><div><div class="eyebrow">All Reports</div><h3>Unit Overview</h3><p>Health, training, SYT, and charter renewal combined by unit.</p></div></div>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Unit</th><th>Health</th><th>Metrics</th><th>Youth</th><th>Direct Leaders Trained</th><th>SYT Current</th><th>Renewal</th><th>Last Contact</th></tr></thead>
+          <tbody id="overviewRows"></tbody>
+        </table></div>
+      </section>
+    </section>
+
+    <section id="metricsView" class="view" hidden>
+      <div id="metricsEmpty" class="empty card"><h2>Unit Metrics report not loaded</h2><p>Upload Unit Metrics Snapshot from the left panel.</p></div>
+      <div id="metricsContent" hidden>
+        <div class="kpis">
+          <div class="kpi"><b id="mUnits">0</b><span>Units</span></div>
+          <div class="kpi green"><b id="mGreen">0</b><span>Green</span></div>
+          <div class="kpi yellow"><b id="mYellow">0</b><span>Yellow</span></div>
+          <div class="kpi red"><b id="mRed">0</b><span>Red</span></div>
+          <div class="kpi"><b id="mStale">0</b><span>Contact &gt; 90 Days</span></div>
+          <div class="kpi"><b id="mDecline">0</b><span>Membership Decline</span></div>
+        </div>
+        <section class="card">
+          <div class="section-head"><div><div class="eyebrow">Unit Metrics Snapshot</div><h3>Unit Health Dashboard</h3></div>
+            <div class="filters"><select id="metricHealth"><option value="">All health</option><option>Green</option><option>Yellow</option><option>Red</option></select><input id="metricSearch" type="search" placeholder="Search units..."></div>
+          </div>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Health</th><th>Unit</th><th>Metrics</th><th>Youth</th><th>YOY</th><th>Retention</th><th>Last Connection</th><th>Assigned Commissioners</th></tr></thead>
+            <tbody id="metricRows"></tbody>
+          </table></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="trainingView" class="view" hidden>
+      <div id="trainingEmpty" class="empty card"><h2>Trained Leaders report not loaded</h2><p>Upload Trained Leaders Status from the left panel.</p></div>
+      <div id="trainingContent" hidden>
+        <div class="kpis">
+          <div class="kpi"><b id="tPeople">0</b><span>Unique Leaders</span></div>
+          <div class="kpi"><b id="tPositions">0</b><span>Unit Positions</span></div>
+          <div class="kpi green"><b id="tTrained">0%</b><span>All Positions Trained</span></div>
+          <div class="kpi"><b id="tDirect">0</b><span>Direct Contact Positions</span></div>
+          <div class="kpi green"><b id="tDirectPct">0%</b><span>Direct Contact Trained</span></div>
+          <div class="kpi red"><b id="tUntrainedDirect">0</b><span>Untrained Direct Contact</span></div>
+        </div>
+
+        <div class="grid2">
+          <section class="card"><div class="eyebrow">Program</div><h3>Direct Contact Training</h3><div id="trainingBars" class="bars"></div></section>
+          <section class="card"><div class="eyebrow">Unit Gaps</div><h3>Units Needing Training Support</h3><div id="trainingPriorities"></div></section>
+        </div>
+
+        <section class="card">
+          <div class="section-head">
+            <div><div class="eyebrow">Training Detail</div><h3>Leader Training Status</h3></div>
+            <div class="filters">
+              <select id="trainingFilter">
+                <option value="direct">Direct contact leaders</option>
+                <option value="untrained-direct">Untrained direct-contact leaders only</option>
+                <option value="all">All unit positions</option>
+                <option value="untrained-all">All untrained positions</option>
+              </select>
+              <button id="untrainedDirectBtn" class="alert-btn">Show Untrained Direct Contact Only</button>
+              <input id="trainingSearch" type="search" placeholder="Search leader or position...">
+            </div>
+          </div>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Unit</th><th>Position</th><th>Direct Contact</th><th>Trained</th><th>Count</th></tr></thead>
+            <tbody id="trainingRows"></tbody>
+          </table></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="sytView" class="view" hidden>
+      <div id="sytEmpty" class="empty card"><h2>Safeguarding Youth report not loaded</h2><p>Upload the Safeguarding Youth Training Aging Report from the left panel.</p></div>
+      <div id="sytContent" hidden>
+        <div class="kpis">
+          <div class="kpi"><b id="sPeople">0</b><span>Registered People</span></div>
+          <div class="kpi green"><b id="sCurrent">0%</b><span>SYT Current</span></div>
+          <div class="kpi yellow"><b id="s90">0</b><span>Expires ≤ 90 Days</span></div>
+          <div class="kpi red"><b id="s30">0</b><span>Expires ≤ 30 Days</span></div>
+          <div class="kpi red"><b id="sExpired">0</b><span>Expired / Not Current</span></div>
+          <div class="kpi"><b id="sUnitPeople">0</b><span>Unit-Assigned Records</span></div>
+        </div>
+
+        <section class="card">
+          <div class="section-head"><div><div class="eyebrow">Safeguarding Youth</div><h3>Training Aging Dashboard</h3></div>
+            <div class="filters"><select id="sytFilter"><option value="">All statuses</option><option value="expired">Expired / Not Current</option><option value="30">Expires ≤ 30 Days</option><option value="90">Expires ≤ 90 Days</option><option value="current">Current</option></select><input id="sytSearch" type="search" placeholder="Search leader or position..."></div>
+          </div>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Unit</th><th>SYT Status</th><th>Count</th></tr></thead>
+            <tbody id="sytRows"></tbody>
+          </table></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="charterView" class="view" hidden>
+      <div id="charterEmpty" class="empty card"><h2>Charter Renewal report not loaded</h2><p>Upload the Unit Renewal Status Report from the left panel.</p></div>
+      <div id="charterContent" hidden>
+        <div class="kpis">
+          <div class="kpi"><b id="cUnits">0</b><span>Units</span></div>
+          <div class="kpi green"><b id="cPosted">0</b><span>Posted</span></div>
+          <div class="kpi yellow"><b id="cPending">0</b><span>Pending / In Process</span></div>
+          <div class="kpi"><b id="cNew">0</b><span>New Units</span></div>
+          <div class="kpi"><b id="c90">0</b><span>Expires ≤ 90 Days</span></div>
+          <div class="kpi red"><b id="c30">0</b><span>Expires ≤ 30 Days</span></div>
+        </div>
+
+        <section class="card">
+          <div class="section-head"><div><div class="eyebrow">Charter Renewal</div><h3>Unit Renewal Dashboard</h3></div>
+            <div class="filters"><select id="charterFilter"><option value="">All statuses</option><option value="Posted">Posted</option><option value="pending">Pending / other</option><option value="new">New Unit</option></select><input id="charterSearch" type="search" placeholder="Search unit or chartered org..."></div>
+          </div>
+          <div class="tablewrap"><table>
+            <thead><tr><th>Unit</th><th>Chartered Organization</th><th>Renewal Status</th><th>Current Expiry</th><th>Days Remaining</th><th>Youth</th><th>Adults</th><th>Last Modified</th></tr></thead>
+            <tbody id="charterRows"></tbody>
+          </table></div>
+        </section>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
