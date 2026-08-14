@@ -1,5 +1,5 @@
 const PUBLIC_DASHBOARD_DATA={
-  "generatedAt": "2026-08-14T15:39:44.765Z",
+  "generatedAt": "2026-08-14T15:58:55.023Z",
   "district": "Northern Lights District",
   "council": "Glacier's Edge Council",
   "metrics": [
@@ -806,7 +806,7 @@ const PUBLIC_DASHBOARD_DATA={
   "training": [
     {
       "Unit": "Crew 1911",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Venturing Crew Advisor",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -814,7 +814,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 1911",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -822,7 +822,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 1911",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -830,7 +830,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 1911",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -838,7 +838,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 1911",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -846,7 +846,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 2047",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -854,7 +854,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 2047",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Venturing Crew Assoc. Advisor",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -862,7 +862,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 2047",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -870,7 +870,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 2047",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -878,7 +878,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 2047",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -886,7 +886,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 2127",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Unit Scouter Reserve",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -894,7 +894,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 2127",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -902,7 +902,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Crew 2127",
-      "Program": "Venturers",
+      "Program": "Venturing",
       "Position": "Venturing Crew Advisor",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -910,7 +910,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3005",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -918,7 +918,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3005",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -926,7 +926,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3005",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -934,7 +934,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3005",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -942,7 +942,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3035",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -950,7 +950,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3035",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -958,7 +958,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3035",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -966,7 +966,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3035",
-      "Program": "Tigers",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -974,7 +974,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3035",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Assistant Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -982,7 +982,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3035",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -990,7 +990,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3035",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -998,7 +998,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3035",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1006,7 +1006,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3053",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1014,7 +1014,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3053",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1022,7 +1022,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3053",
-      "Program": "Tigers",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1030,7 +1030,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3053",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1038,7 +1038,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3053",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1046,7 +1046,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3053",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1054,7 +1054,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3053",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1062,7 +1062,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1070,7 +1070,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1078,7 +1078,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1086,7 +1086,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1094,7 +1094,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1102,7 +1102,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1110,7 +1110,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1118,7 +1118,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1126,7 +1126,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3070",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1134,7 +1134,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3076",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1142,7 +1142,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3076",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1150,7 +1150,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3076",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Unit Scouter Reserve",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1158,15 +1158,15 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3076",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
-      "Count": 2
+      "Count": 3
     },
     {
       "Unit": "Pack 3076",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1174,15 +1174,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3076",
-      "Program": "Tigers",
-      "Position": "Den Leader",
-      "Direct_Contact_Leader": "YES",
-      "Trained": "YES",
-      "Count": 1
-    },
-    {
-      "Unit": "Pack 3076",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1190,7 +1182,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3079",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1198,7 +1190,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3079",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1206,7 +1198,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3079",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1214,7 +1206,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3079",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1222,7 +1214,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3079",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Assistant Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1230,7 +1222,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3079",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1238,7 +1230,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3079",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1246,7 +1238,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3079",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1254,7 +1246,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3088",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1262,7 +1254,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3088",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1270,7 +1262,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3088",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1278,7 +1270,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3099",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1286,7 +1278,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3099",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1294,7 +1286,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3099",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1302,7 +1294,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3099",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1310,7 +1302,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3099",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Unit Scouter Reserve",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1318,7 +1310,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3099",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1326,7 +1318,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3099",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1334,7 +1326,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3099",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1342,7 +1334,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3127",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1350,7 +1342,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3127",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1358,7 +1350,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3127",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1366,7 +1358,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3127",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1374,7 +1366,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3127",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Assistant Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1382,7 +1374,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3127",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1390,7 +1382,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3132",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1398,7 +1390,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3132",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1406,7 +1398,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3132",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1414,7 +1406,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3132",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1422,7 +1414,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3132",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1430,7 +1422,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3132",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1438,7 +1430,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3132",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Assistant Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1446,7 +1438,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3132",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1454,7 +1446,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3143",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1462,7 +1454,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3143",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1470,7 +1462,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3143",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1478,7 +1470,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3143",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1486,7 +1478,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3143",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1494,7 +1486,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3145",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1502,7 +1494,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3145",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1510,7 +1502,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3145",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1518,7 +1510,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3145",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1526,7 +1518,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3145",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1534,7 +1526,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3145",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1542,7 +1534,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3145",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1550,7 +1542,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3146",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1558,7 +1550,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3146",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1566,7 +1558,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3146",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1574,7 +1566,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3146",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1582,7 +1574,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3146",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1590,7 +1582,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3146",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1598,7 +1590,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3155",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1606,7 +1598,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3155",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1614,7 +1606,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3155",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1622,7 +1614,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3155",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1630,7 +1622,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3155",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1638,7 +1630,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3155",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1646,7 +1638,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3155",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1654,15 +1646,15 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3161",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
-      "Count": 2
+      "Count": 3
     },
     {
       "Unit": "Pack 3161",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1670,7 +1662,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3161",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1678,7 +1670,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3161",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Assistant Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1686,15 +1678,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3161",
-      "Program": "Tigers",
-      "Position": "Den Leader",
-      "Direct_Contact_Leader": "YES",
-      "Trained": "NO",
-      "Count": 1
-    },
-    {
-      "Unit": "Pack 3161",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1702,7 +1686,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3161",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1710,7 +1694,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3161",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1718,7 +1702,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3161",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1726,7 +1710,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3243",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1734,7 +1718,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3243",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Assistant Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1742,15 +1726,15 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3243",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
-      "Count": 4
+      "Count": 5
     },
     {
       "Unit": "Pack 3243",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1758,7 +1742,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3243",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1766,7 +1750,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3243",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1774,7 +1758,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3243",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1782,15 +1766,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3243",
-      "Program": "Tigers",
-      "Position": "Den Leader",
-      "Direct_Contact_Leader": "YES",
-      "Trained": "YES",
-      "Count": 1
-    },
-    {
-      "Unit": "Pack 3243",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1798,7 +1774,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3329",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1806,7 +1782,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3329",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1814,7 +1790,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3329",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1822,7 +1798,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3329",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1830,7 +1806,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3329",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1838,7 +1814,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3329",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1846,7 +1822,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1854,7 +1830,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1862,7 +1838,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1870,7 +1846,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1878,7 +1854,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1886,7 +1862,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1894,7 +1870,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -1902,7 +1878,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1910,7 +1886,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3350",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1918,7 +1894,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3368",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1926,7 +1902,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3368",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1934,7 +1910,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3368",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1942,7 +1918,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3368",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1950,7 +1926,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3368",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1958,7 +1934,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3377",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1966,7 +1942,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3377",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -1974,7 +1950,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3377",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1982,7 +1958,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3377",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -1990,7 +1966,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3377",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1998,7 +1974,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3377",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -2006,7 +1982,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3377",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -2014,7 +1990,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3377",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Assistant Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
@@ -2022,7 +1998,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3543",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Chair",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -2030,7 +2006,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3543",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
@@ -2038,7 +2014,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3543",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -2046,7 +2022,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3543",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
@@ -2054,7 +2030,7 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "Unit": "Pack 3543",
-      "Program": "Cub Scouting",
+      "Program": "Cub Scouts",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",

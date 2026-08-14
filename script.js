@@ -39,6 +39,16 @@ function normMetric(r){
  let u={key:key(r.Unit_Type,r.Unit_Number),type:r.Unit_Type,number:r.Unit_Number,charter:r.Chartered_Organization,score:num(r.Metric_Summary__the_number_of_metrics_met_)??0,cur:num(r.Total_Youth__current_)??0,prev:num(r.Total_Youth__prev__year_)??0,delta:num(r.YOY_Members____)??0,ret:num(r.Retention____),last:r.Last_Connection_Date,days:daysSince(r.Last_Connection_Date),comms:r.Assigned_Commissioners||"",mTraining:r.UL___CC_Trained,mSize:r.Exceed_Small_Unit_Threshold,mGrowth:r.YOY_Membership_Growth,mAdv:r.Advancement___Youth_Leadership,mOutdoor:r.Outdoor};
  let h=u.score>=4?"Green":u.score>=2?"Yellow":"Red";if(u.days===null||u.days>180)h="Red";else if(u.days>90&&h==="Green")h="Yellow";u.health=h;return u
 }
+
+function normalizeTrainingProgram(program, position, unit){
+ let text=`${program||""} ${position||""} ${unit||""}`.toLowerCase();
+ if(/\b(ship|seascout|sea scout)\b/.test(text))return "Sea Scouts";
+ if(/\b(crew|ventur|advisor)\b/.test(text))return "Venturing";
+ if(/\b(troop|scoutmaster|scouts bsa)\b/.test(text))return "Scouts BSA";
+ if(/\b(pack|cub|tiger|wolf|bear|webelos|arrow of light|den leader|cubmaster)\b/.test(text))return "Cub Scouts";
+ return "Other";
+}
+
 function normLeader(r){return{key:keyFromUnitLabel(r.Unit),unit:r.Unit,first:r.First_Name,last:r.Last_Name,member:r.MemberID,position:r.Position,direct:r.Direct_Contact_Leader,trained:r.Trained,expires:r.Registration_Expiration_Date,mandatory:r.Incomplete_Mandatory,classroom:r.Incomplete_Classroom,online:r.Incomplete_Online,program:r.Program}}
 function normSyt(r){return{key:key(r.unittype,r.unitnumber),type:r.unittype,number:r.unitnumber,first:r.firstname,last:r.lastname,member:r.memberid,position:r.positionname,current:r.isyptcurrent2,expires:r.yptexpirationdatec,daysRemaining:dayDelta(r.yptexpirationdatec),regExpires:r.cregistrationexpirydate}}
 function normCharter(r){return{key:key(r.Unit,r.Unit_Number),type:r.Unit,number:r.Unit_Number,charter:r.Current_Chartered_Org,status:r.Renewal_Status,newStatus:r.New_Separated_Rechartered,expiry:r.Current_Expiry_Date,daysRemaining:dayDelta(r.Current_Expiry_Date),youth:num(r.Total_Youth)??0,adults:num(r.Total_Adults)??0,lastModified:r.Last_Modified}}
@@ -430,7 +440,7 @@ if(typeof PUBLIC_DASHBOARD_DATA!=="undefined"){
     viewerTrainingRows=(PUBLIC_DASHBOARD_DATA.training||[]).map(r=>({
       key:keyFromUnitLabel(r.Unit),
       unit:r.Unit,
-      program:r.Program||"Other",
+      program:normalizeTrainingProgram(r.Program,r.Position,r.Unit),
       position:r.Position||"Unit Position",
       direct:r.Direct_Contact_Leader,
       trained:r.Trained,
