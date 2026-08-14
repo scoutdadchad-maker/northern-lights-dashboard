@@ -44,7 +44,7 @@
         <label class="unit-select-label">Unit Selector
           <select id="globalUnitSelect"><option value="">All Units</option></select>
         </label>
-        <div id="unitIndicator" class="unit-indicator">All Units</div>
+        <div id="unitIndicator" class="unit-indicator">All Units</div><button id="needsAttentionBtn" class="attention-toggle">Needs Attention</button>
       </div>
     </header>
 
@@ -57,6 +57,22 @@
     </section>
 
     <section id="overviewView" class="view" hidden>
+
+      <section id="unitProfile" class="card unit-profile" hidden>
+        <div class="profile-head">
+          <div><div class="eyebrow">360° Unit Profile</div><h3 id="profileUnit">Selected Unit</h3><p id="profileCharter" class="muted"></p></div>
+          <span id="profileHealth" class="profile-health">—</span>
+        </div>
+        <div class="profile-grid">
+          <div><b id="profileMetrics">—</b><span>Unit Metrics</span></div>
+          <div><b id="profileYouth">—</b><span>Youth</span></div>
+          <div><b id="profileRetention">—</b><span>Retention</span></div>
+          <div><b id="profileTraining">—</b><span>Direct Leaders Trained</span></div>
+          <div><b id="profileSyt">—</b><span>SYT Current</span></div>
+          <div><b id="profileCharterStatus">—</b><span>Charter Status</span></div>
+          <div><b id="profileContact">—</b><span>Last Commissioner Contact</span></div>
+        </div>
+      </section>
       <div class="kpis">
         <div class="kpi"><b id="ovUnits">0</b><span>Units in View</span></div>
         <div class="kpi"><b id="ovYouth">0</b><span>Youth Served</span></div>
@@ -95,7 +111,7 @@
           <div class="section-head"><div><div class="eyebrow">Unit Metrics Snapshot</div><h3>Unit Health Dashboard</h3></div>
             <div class="filters"><select id="metricHealth"><option value="">All health</option><option>Green</option><option>Yellow</option><option>Red</option></select><input id="metricSearch" type="search" placeholder="Search units..."></div>
           </div>
-          <div class="tablewrap"><table>
+          <div id="metricBreakdown" class="metric-breakdown"></div><div class="tablewrap"><table>
             <thead><tr><th>Health</th><th>Unit</th><th>Metrics</th><th>Youth</th><th>YOY</th><th>Retention</th><th>Last Connection</th><th>Assigned Commissioners</th></tr></thead>
             <tbody id="metricRows"></tbody>
           </table></div>
@@ -154,7 +170,7 @@
           <div class="kpi"><b id="sUnitPeople">0</b><span>Unit-Assigned Records</span></div>
         </div>
 
-        <section class="card">
+        <section class="card"><div id="sytBands" class="aging-bands"></div>
           <div class="section-head"><div><div class="eyebrow">Safeguarding Youth</div><h3>Training Aging Dashboard</h3></div>
             <div class="filters"><select id="sytFilter"><option value="">All statuses</option><option value="expired">Expired / Not Current</option><option value="30">Expires ≤ 30 Days</option><option value="90">Expires ≤ 90 Days</option><option value="current">Current</option></select><input id="sytSearch" type="search" placeholder="Search leader or position..."></div>
           </div>
@@ -178,7 +194,7 @@
           <div class="kpi red"><b id="c30">0</b><span>Expires ≤ 30 Days</span></div>
         </div>
 
-        <section class="card">
+        <section class="card"><div id="charterBands" class="aging-bands"></div>
           <div class="section-head"><div><div class="eyebrow">Charter Renewal</div><h3>Unit Renewal Dashboard</h3></div>
             <div class="filters"><select id="charterFilter"><option value="">All statuses</option><option value="Posted">Posted</option><option value="pending">Pending / other</option><option value="new">New Unit</option></select><input id="charterSearch" type="search" placeholder="Search unit or chartered org..."></div>
           </div>

@@ -6,3 +6,22 @@
 .viewer-hidden{display:none!important}
 .viewer-badge{display:inline-block;margin:0 8px 10px;padding:5px 8px;border-radius:999px;border:1px solid rgba(112,223,191,.35);color:var(--aqua);font-size:.68rem;font-weight:900;letter-spacing:.08em}
 .readonly-notice{border:1px solid rgba(128,184,255,.28);background:rgba(128,184,255,.07);color:#ddebff;padding:10px 13px;border-radius:11px;margin-bottom:14px;font-size:.8rem}
+
+.attention-toggle{border:1px solid rgba(239,102,97,.45);background:rgba(239,102,97,.08);color:#ffd9d7;border-radius:10px;padding:10px 12px;font-weight:850;cursor:pointer}
+.attention-toggle.active{background:var(--red);color:#fff}
+.unit-profile{border-color:rgba(112,223,191,.28)}
+.profile-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+.profile-health{border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-weight:900}
+.profile-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin-top:14px}
+.profile-grid>div{border:1px solid var(--line);border-radius:11px;padding:11px;background:rgba(255,255,255,.025)}
+.profile-grid b{display:block;font-size:1.15rem}.profile-grid span{display:block;color:var(--muted);font-size:.72rem;margin-top:3px}
+.metric-breakdown{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0}
+.metric-chip{border:1px solid var(--line);border-radius:10px;padding:10px;background:rgba(255,255,255,.025)}
+.metric-chip b{display:block;font-size:.86rem}.metric-chip span{font-size:.75rem;color:var(--muted)}
+.metric-chip.good{border-color:rgba(54,202,120,.38)}.metric-chip.warn{border-color:rgba(239,196,77,.38)}.metric-chip.bad{border-color:rgba(239,102,97,.38)}
+.aging-bands{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:14px}
+.band{border:1px solid var(--line);border-radius:10px;padding:11px}.band b{display:block;font-size:1.3rem}.band span{display:block;color:var(--muted);font-size:.72rem}
+.band.good b{color:var(--green)}.band.warn b{color:var(--yellow)}.band.bad b{color:var(--red)}
+.privacy-value{color:var(--muted);font-style:italic}
+@media(max-width:1100px){.profile-grid{grid-template-columns:repeat(3,1fr)}.aging-bands{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:650px){.profile-grid,.metric-breakdown,.aging-bands{grid-template-columns:1fr}}

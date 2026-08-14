@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded",()=>{
   });
 });
 
-let metrics=[],leaders=[],syt=[],charters=[],metaDates=[],activeView="overview",selectedUnit="";
+let metrics=[],leaders=[],syt=[],charters=[],metaDates=[],activeView="overview",selectedUnit="",attentionOnly=false;
 const $=id=>document.getElementById(id);
 const yes=v=>String(v||"").trim().toUpperCase()==="YES";
 const num=v=>{let n=Number(String(v??"").replace(/[,% ]/g,""));return Number.isFinite(n)?n:null};
@@ -36,7 +36,7 @@ function keyFromUnitLabel(v){let m=clean(v).match(/^(Pack|Troop|Crew|Ship)\s+0*(
 function labelFromKey(k){let u=unitCatalog().find(x=>x.key===k);return u?u.label:k}
 
 function normMetric(r){
- let u={key:key(r.Unit_Type,r.Unit_Number),type:r.Unit_Type,number:r.Unit_Number,charter:r.Chartered_Organization,score:num(r.Metric_Summary__the_number_of_metrics_met_)??0,cur:num(r.Total_Youth__current_)??0,prev:num(r.Total_Youth__prev__year_)??0,delta:num(r.YOY_Members____)??0,ret:num(r.Retention____),last:r.Last_Connection_Date,days:daysSince(r.Last_Connection_Date),comms:r.Assigned_Commissioners||""};
+ let u={key:key(r.Unit_Type,r.Unit_Number),type:r.Unit_Type,number:r.Unit_Number,charter:r.Chartered_Organization,score:num(r.Metric_Summary__the_number_of_metrics_met_)??0,cur:num(r.Total_Youth__current_)??0,prev:num(r.Total_Youth__prev__year_)??0,delta:num(r.YOY_Members____)??0,ret:num(r.Retention____),last:r.Last_Connection_Date,days:daysSince(r.Last_Connection_Date),comms:r.Assigned_Commissioners||"",mTraining:r.UL___CC_Trained,mSize:r.Exceed_Small_Unit_Threshold,mGrowth:r.YOY_Membership_Growth,mAdv:r.Advancement___Youth_Leadership,mOutdoor:r.Outdoor};
  let h=u.score>=4?"Green":u.score>=2?"Yellow":"Red";if(u.days===null||u.days>180)h="Red";else if(u.days>90&&h==="Green")h="Yellow";u.health=h;return u
 }
 function normLeader(r){return{key:keyFromUnitLabel(r.Unit),unit:r.Unit,first:r.First_Name,last:r.Last_Name,member:r.MemberID,position:r.Position,direct:r.Direct_Contact_Leader,trained:r.Trained,expires:r.Registration_Expiration_Date,mandatory:r.Incomplete_Mandatory,classroom:r.Incomplete_Classroom,online:r.Incomplete_Online,program:r.Program}}
@@ -87,10 +87,7 @@ function populateUnitSelector(){
 $("globalUnitSelect").onchange=e=>{selectedUnit=e.target.value;updateUnitIndicator();renderAll()};
 function updateUnitIndicator(){$("unitIndicator").textContent=selectedUnit?labelFromKey(selectedUnit):"All Units"}
 
-function scope(arr){
- let filtered=activeOnly(arr);
- return selectedUnit?filtered.filter(x=>x.key===selectedUnit):filtered
-}
+function scope(arr){let filtered=activeOnly(arr);if(selectedUnit)filtered=filtered.filter(x=>x.key===selectedUnit);return applyAttention(filtered)}
 function rate(a,fn){return a.length?Math.round(a.filter(fn).length/a.length*100):0}
 function uniqPeople(a){return new Set(a.map(x=>x.member).filter(Boolean)).size}
 function bar(label,n,total,cls=""){let p=total?Math.round(n/total*100):0;return `<div class="barrow"><span>${label}</span><div class="track"><div class="fill ${cls}" style="width:${p}%"></div></div><b>${p}%</b></div>`}
@@ -120,7 +117,7 @@ function updateSourceStatus(){
 function refresh(){
  populateUnitSelector();updateSourceStatus();updateEmpty();if(metrics.length||leaders.length||syt.length||charters.length){showView(activeView);$("metaDate").textContent=metaDates.length?`Latest report: ${metaDates[metaDates.length-1]}`:"";renderAll()}
 }
-function renderAll(){renderOverview();renderMetrics();renderTraining();renderSyt();renderCharter()}
+function renderAll(){renderOverview();renderMetrics();renderTraining();renderSyt();renderCharter();renderUnitProfile();renderMetricBreakdown();renderSytBands();renderCharterBands()}
 
 function trainingUnitSummary(){
  let m=new Map();activeOnly(leaders).filter(x=>x.key).forEach(x=>{if(!m.has(x.key))m.set(x.key,{direct:0,trained:0,total:0});let z=m.get(x.key);z.total++;if(yes(x.direct)){z.direct++;if(yes(x.trained))z.trained++}});return m
@@ -129,6 +126,62 @@ function sytUnitSummary(){
  let m=new Map();activeOnly(syt).filter(x=>x.key&&x.type).forEach(x=>{if(!m.has(x.key))m.set(x.key,{total:0,current:0,expiring30:0});let z=m.get(x.key);z.total++;if(yes(x.current))z.current++;if(x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30)z.expiring30++});return m
 }
 function charterMap(){let m=new Map();charters.forEach(x=>m.set(x.key,x));return m}
+
+
+function attentionUnitKeys(){
+ let keys=new Set(),tmap=trainingUnitSummary(),smap=sytUnitSummary(),cmap=charterMap();
+ unitCatalog().forEach(u=>{
+  let m=metrics.find(x=>x.key===u.key),t=tmap.get(u.key),sy=smap.get(u.key),c=cmap.get(u.key);
+  if((m&&["Red","Yellow"].includes(m.health)) ||
+     (m&&(m.days===null||m.days>90)) ||
+     (t&&t.direct>t.trained) ||
+     (sy&&sy.total>sy.current) ||
+     (c&&clean(c.status).toLowerCase()!=="posted"&&!clean(c.newStatus).toLowerCase().includes("new"))) keys.add(u.key);
+ });
+ return keys
+}
+function applyAttention(arr){if(!attentionOnly)return arr;let keys=attentionUnitKeys();return arr.filter(x=>keys.has(x.key))}
+function renderUnitProfile(){
+ let box=$("unitProfile");if(!box)return;
+ if(!selectedUnit){box.hidden=true;return}
+ let u=unitCatalog().find(x=>x.key===selectedUnit),m=metrics.find(x=>x.key===selectedUnit),
+     t=trainingUnitSummary().get(selectedUnit),sy=sytUnitSummary().get(selectedUnit),c=charterMap().get(selectedUnit);
+ box.hidden=false;$("profileUnit").textContent=u?u.label:selectedUnit;$("profileCharter").textContent=m?m.charter:(c?c.charter:"");
+ $("profileHealth").textContent=m?m.health:"—";$("profileMetrics").textContent=m?`${m.score}/5`:"—";$("profileYouth").textContent=m?m.cur:"—";
+ $("profileRetention").textContent=m&&m.ret!==null?m.ret+"%":"—";
+ $("profileTraining").innerHTML=t&&t.direct?`${t.trained}/${t.direct} (${Math.round(t.trained/t.direct*100)}%)`:'<span class="privacy-value">Not available</span>';
+ $("profileSyt").innerHTML=sy&&sy.total?`${sy.current}/${sy.total} (${Math.round(sy.current/sy.total*100)}%)`:'<span class="privacy-value">Not available</span>';
+ $("profileCharterStatus").textContent=c?(c.status||c.newStatus||"Pending"):"Not available";
+ $("profileContact").textContent=m?(m.last||"None"):"—";
+}
+function renderMetricBreakdown(){
+ if(!$("metricBreakdown"))return;let a=scope(metrics);
+ let defs=[["Leader Training","mTraining"],["Unit Size","mSize"],["YOY Growth","mGrowth"],["Advancement / Youth Leadership","mAdv"],["Outdoor","mOutdoor"]];
+ $("metricBreakdown").innerHTML=defs.map(([label,k])=>{
+  let available=a.filter(x=>x[k]!==undefined&&x[k]!==null&&x[k]!=="");
+  if(!available.length)return `<div class="metric-chip"><b>${label}</b><span class="privacy-value">Summary only / not available</span></div>`;
+  let y=available.filter(x=>yes(x[k])).length,p=Math.round(y/available.length*100),cls=p>=75?"good":p>=50?"warn":"bad";
+  return `<div class="metric-chip ${cls}"><b>${label}</b><span>${y}/${available.length} • ${p}% met</span></div>`
+ }).join("")
+}
+function renderSytBands(){
+ if(!$("sytBands"))return;let a=scope(syt.filter(x=>x.key&&x.type));
+ let current=a.filter(x=>yes(x.current)&&!(x.daysRemaining!==null&&x.daysRemaining<=90)).length,
+ d6190=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=61&&x.daysRemaining<=90).length,
+ d3160=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=31&&x.daysRemaining<=60).length,
+ d30=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length,
+ expired=a.filter(x=>!yes(x.current)||x.daysRemaining<0).length;
+ $("sytBands").innerHTML=[["Current",current,"good"],["61–90 Days",d6190,""],["31–60 Days",d3160,"warn"],["≤30 Days",d30,"bad"],["Expired / Not Current",expired,"bad"]].map(x=>`<div class="band ${x[2]}"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("")
+}
+function renderCharterBands(){
+ if(!$("charterBands"))return;let a=scope(charters);
+ let posted=a.filter(x=>clean(x.status).toLowerCase()==="posted").length,
+ d6190=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=61&&x.daysRemaining<=90).length,
+ d3160=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=31&&x.daysRemaining<=60).length,
+ d30=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining>=0&&x.daysRemaining<=30).length,
+ past=a.filter(x=>x.daysRemaining!==null&&x.daysRemaining<0).length;
+ $("charterBands").innerHTML=[["Posted",posted,"good"],["61–90 Days",d6190,""],["31–60 Days",d3160,"warn"],["≤30 Days",d30,"bad"],["Past Due",past,"bad"]].map(x=>`<div class="band ${x[2]}"><b>${x[1]}</b><span>${x[0]}</span></div>`).join("")
+}
 
 function renderOverview(){
  let ms=scope(metrics),ls=scope(leaders.filter(x=>x.key)),ss=scope(syt.filter(x=>x.key&&x.type)),cs=scope(charters),units=selectedUnit?(unitCatalog().filter(x=>x.key===selectedUnit)):unitCatalog();
@@ -367,3 +420,8 @@ renderAll = function(){
   if(typeof renderViewerSytTable==="function") renderViewerSytTable();
   markViewerSourcesLoaded();
 };
+
+window.addEventListener("DOMContentLoaded",()=>{
+ const b=document.getElementById("needsAttentionBtn");
+ if(b&&!b.dataset.bound){b.dataset.bound="1";b.addEventListener("click",()=>{attentionOnly=!attentionOnly;b.classList.toggle("active",attentionOnly);renderAll()})}
+});
