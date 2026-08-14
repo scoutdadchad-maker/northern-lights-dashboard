@@ -432,9 +432,18 @@ function markViewerSourcesLoaded(){
 // ---------- Sanitized Viewer Data Loader ----------
 let viewerTrainingRows=[];
 let viewerSytRows=[];
+let viewerSummary={registeredLeaders:null,sytPeople:null};
+let exactPublishedSummary={registeredLeaders:null,sytPeople:null};
 
 if(typeof PUBLIC_DASHBOARD_DATA!=="undefined"){
   try{
+    if(PUBLIC_DASHBOARD_DATA.summary){
+      exactPublishedSummary={
+        registeredLeaders:Number(PUBLIC_DASHBOARD_DATA.summary.registeredLeaders),
+        sytPeople:Number(PUBLIC_DASHBOARD_DATA.summary.sytPeople)
+      };
+      viewerSummary={...exactPublishedSummary};
+    }
     if(PUBLIC_DASHBOARD_DATA.metrics) metrics=PUBLIC_DASHBOARD_DATA.metrics.map(normMetric);
 
     viewerTrainingRows=(PUBLIC_DASHBOARD_DATA.training||[]).map(r=>({
@@ -611,4 +620,111 @@ window.addEventListener("DOMContentLoaded",()=>{
     renderViewerDirectContactChart();
     renderViewerTrainingPriorities();
   });
+});
+
+
+function renderViewerSafePeopleCounts(){
+  if(typeof exactPublishedSummary==="undefined")return;
+
+  if($("tPeople")){
+    if(selectedUnit){
+      let rows=(typeof viewerTrainingRows!=="undefined"?viewerTrainingRows:[]).filter(r=>r.key===selectedUnit);
+      let positions=rows.reduce((sum,r)=>sum+Number(r.count||0),0);
+      $("tPeople").textContent=positions;
+      let label=$("tPeople").nextElementSibling;
+      if(label)label.textContent="Available Registered Leader Records";
+    }else{
+      let v=exactPublishedSummary.registeredLeaders;
+      $("tPeople").textContent=Number.isFinite(v)?v:"—";
+      let label=$("tPeople").nextElementSibling;
+      if(label)label.textContent="Total Available Registered Leaders";
+    }
+  }
+
+  if($("sPeople")){
+    if(selectedUnit){
+      let rows=(typeof viewerSytRows!=="undefined"?viewerSytRows:[]).filter(r=>r.key===selectedUnit);
+      let people=rows.reduce((sum,r)=>sum+Number(r.count||0),0);
+      $("sPeople").textContent=people;
+      let label=$("sPeople").nextElementSibling;
+      if(label)label.textContent="Available SYT People";
+    }else{
+      let v=exactPublishedSummary.sytPeople;
+      $("sPeople").textContent=Number.isFinite(v)?v:"—";
+      let label=$("sPeople").nextElementSibling;
+      if(label)label.textContent="Total Available SYT People";
+    }
+  }
+}
+
+const _v106RenderAll = renderAll;
+renderAll = function(){
+  _v106RenderAll();
+  renderViewerSafePeopleCounts();
+};
+window.addEventListener("DOMContentLoaded",()=>{
+  const sel=document.getElementById("globalUnitSelect");
+  if(sel)sel.addEventListener("change",renderViewerSafePeopleCounts);
+});
+
+const _v107FinalRenderAll = renderAll;
+renderAll = function(){
+  _v107FinalRenderAll();
+  renderViewerSafePeopleCounts();
+};
+
+window.addEventListener("load",()=>{
+  renderViewerSafePeopleCounts();
+});
+
+if(typeof PUBLIC_DASHBOARD_DATA!=="undefined" && PUBLIC_DASHBOARD_DATA.summary){
+  console.info("Viewer published counts:", PUBLIC_DASHBOARD_DATA.summary);
+}
+
+function validatePublishedSummary(){
+  if(typeof PUBLIC_DASHBOARD_DATA==="undefined"){
+    console.error("Viewer data.js did not load.");
+    return false;
+  }
+  const summary=PUBLIC_DASHBOARD_DATA.summary;
+  const validSummary=summary &&
+    Number.isFinite(Number(summary.registeredLeaders)) &&
+    Number.isFinite(Number(summary.sytPeople));
+  if(!validSummary){
+    console.error("Viewer data.js is missing valid registeredLeaders/sytPeople summary fields.");
+    return false;
+  }
+  console.info("Viewer data loaded:", {
+    schemaVersion:PUBLIC_DASHBOARD_DATA.schemaVersion||"legacy",
+    generatedAt:PUBLIC_DASHBOARD_DATA.generatedAt||"unknown",
+    registeredLeaders:Number(summary.registeredLeaders),
+    sytPeople:Number(summary.sytPeople)
+  });
+  return true;
+}
+window.addEventListener("DOMContentLoaded",validatePublishedSummary);
+window.addEventListener("load",()=>{
+  renderViewerSafePeopleCounts();
+  setTimeout(renderViewerSafePeopleCounts,0);
+});
+
+window.addEventListener("DOMContentLoaded",()=>{
+  const w=document.getElementById("dataVersionWarning");
+  if(w){
+    const ok=validatePublishedSummary();
+    w.hidden=ok;
+    if(!ok)w.textContent="Viewer data.js is missing the required published summary values. Generate a new data.js from the current Admin dashboard.";
+  }
+});
+
+window.addEventListener("DOMContentLoaded",()=>{
+  const s=document.getElementById("viewerDataStatus");
+  if(!s)return;
+  if(typeof PUBLIC_DASHBOARD_DATA!=="undefined" && PUBLIC_DASHBOARD_DATA.summary){
+    const sv=PUBLIC_DASHBOARD_DATA.schemaVersion||"legacy";
+    const dt=PUBLIC_DASHBOARD_DATA.generatedAt?new Date(PUBLIC_DASHBOARD_DATA.generatedAt).toLocaleString():"unknown time";
+    s.textContent=`Viewer data ${sv} • ${dt}`;
+  }else{
+    s.textContent="Viewer data not loaded";
+  }
 });

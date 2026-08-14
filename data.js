@@ -1,7 +1,12 @@
 const PUBLIC_DASHBOARD_DATA={
-  "generatedAt": "2026-08-14T15:58:55.023Z",
+  "schemaVersion": "10.9",
+  "generatedAt": "2026-08-14T16:22:54.149Z",
   "district": "Northern Lights District",
   "council": "Glacier's Edge Council",
+  "summary": {
+    "registeredLeaders": 423,
+    "sytPeople": 426
+  },
   "metrics": [
     {
       "Unit_Type": "Crew",

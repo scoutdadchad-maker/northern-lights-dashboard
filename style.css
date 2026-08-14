@@ -40,3 +40,5 @@
 .health-indicator-title{margin:8px 0 4px}
 
 .sanitized-note{font-size:.74rem;color:var(--muted);margin:8px 0 2px}
+
+.data-warning{border:1px solid rgba(239,196,77,.4);background:rgba(239,196,77,.08);color:#fff2bd;padding:10px 12px;border-radius:10px;margin-bottom:12px;font-size:.8rem}

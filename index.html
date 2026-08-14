@@ -34,7 +34,7 @@
     <div class="privacy">🔒 View-only mode • Data source controls are disabled.</div>
   </aside>
 
-  <main class="main"><div class="readonly-notice">View-only mode: data-source uploads and administrative controls are disabled.</div>
+  <main class="main"><div id="dataVersionWarning" class="data-warning" hidden>Viewer data.js is missing required published summary values.</div><div class="readonly-notice">View-only mode: data-source uploads and administrative controls are disabled.</div>
     <header class="topbar">
       <div>
         <div id="viewEyebrow" class="eyebrow">Combined Dashboard</div>
@@ -48,7 +48,7 @@
       </div>
     </header>
 
-    <div class="meta"><span>Glacier's Edge Council</span><span>Northern Lights District</span><span id="metaDate"></span></div>
+    <div class="meta"><span>Glacier's Edge Council</span><span>Northern Lights District</span><span id="metaDate"></span><span id="viewerDataStatus"></span></div>
 
     <section id="emptyState" class="empty card">
       <div class="empty-icon">◫</div>
@@ -125,7 +125,7 @@
       <div id="trainingEmpty" class="empty card"><h2>Trained Leaders report not loaded</h2><p>Upload Trained Leaders Status from the left panel.</p></div>
       <div id="trainingContent" hidden>
         <div class="kpis">
-          <div class="kpi"><b id="tPeople">0</b><span>Unique Leaders</span></div>
+          <div class="kpi"><b id="tPeople">0</b><span>Total Available Registered Leaders</span></div>
           <div class="kpi"><b id="tPositions">0</b><span>Unit Positions</span></div>
           <div class="kpi green"><b id="tTrained">0%</b><span>All Positions Trained</span></div>
           <div class="kpi"><b id="tDirect">0</b><span>Direct Contact Positions</span></div>
@@ -165,7 +165,7 @@
       <div id="sytEmpty" class="empty card"><h2>Safeguarding Youth report not loaded</h2><p>Upload the Safeguarding Youth Training Aging Report from the left panel.</p></div>
       <div id="sytContent" hidden>
         <div class="kpis">
-          <div class="kpi"><b id="sPeople">0</b><span>Registered People</span></div>
+          <div class="kpi"><b id="sPeople">0</b><span>Total Available SYT People</span></div>
           <div class="kpi green"><b id="sCurrent">0%</b><span>SYT Current</span></div>
           <div class="kpi yellow"><b id="s90">0</b><span>Expires ≤ 90 Days</span></div>
           <div class="kpi red"><b id="s30">0</b><span>Expires ≤ 30 Days</span></div>
