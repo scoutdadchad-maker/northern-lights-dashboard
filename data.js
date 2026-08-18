@@ -1,12 +1,12 @@
 const PUBLIC_DASHBOARD_DATA={
   "schemaVersion": "11.3",
-  "generatedAt": "2026-08-14T16:47:54.251Z",
+  "generatedAt": "2026-08-18T23:21:56.906Z",
   "district": "Northern Lights District",
   "council": "Glacier's Edge Council",
   "summary": {
     "registeredLeaders": 423,
-    "sytPeople": 426,
-    "sytRecords": 517
+    "sytPeople": 425,
+    "sytRecords": 515
   },
   "metrics": [
     {
@@ -100,8 +100,8 @@ const PUBLIC_DASHBOARD_DATA={
       "Chartered_Organization": "McFarland Volunteer Fire Dept",
       "Metric_Summary__the_number_of_metrics_met_": 0,
       "Total_Youth__current_": 14,
-      "Total_Youth__prev__year_": 15,
-      "YOY_Members____": -1,
+      "Total_Youth__prev__year_": 14,
+      "YOY_Members____": 0,
       "Retention____": 66,
       "Last_Connection_Date": "10/18/2025",
       "Assigned_Commissioners": "",
@@ -117,8 +117,8 @@ const PUBLIC_DASHBOARD_DATA={
       "Chartered_Organization": "Portage Presbyterian Church",
       "Metric_Summary__the_number_of_metrics_met_": 2,
       "Total_Youth__current_": 11,
-      "Total_Youth__prev__year_": 16,
-      "YOY_Members____": -5,
+      "Total_Youth__prev__year_": 17,
+      "YOY_Members____": -6,
       "Retention____": 37,
       "Last_Connection_Date": "04/12/2026",
       "Assigned_Commissioners": "",
@@ -149,7 +149,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3079",
       "Chartered_Organization": "Wisconsin Dells Kiwanis Club",
-      "Metric_Summary__the_number_of_metrics_met_": 3,
+      "Metric_Summary__the_number_of_metrics_met_": 4,
       "Total_Youth__current_": 24,
       "Total_Youth__prev__year_": 24,
       "YOY_Members____": 0,
@@ -160,7 +160,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Exceed_Small_Unit_Threshold": "Yes",
       "YOY_Membership_Growth": "No",
       "Advancement___Youth_Leadership": "Yes",
-      "Outdoor": "No"
+      "Outdoor": "Yes"
     },
     {
       "Unit_Type": "Pack",
@@ -201,8 +201,8 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3127",
       "Chartered_Organization": "Wild Warner Inc",
       "Metric_Summary__the_number_of_metrics_met_": 0,
-      "Total_Youth__current_": 10,
-      "Total_Youth__prev__year_": 12,
+      "Total_Youth__current_": 11,
+      "Total_Youth__prev__year_": 13,
       "YOY_Members____": -2,
       "Retention____": 58,
       "Last_Connection_Date": "07/22/2026",
@@ -235,9 +235,9 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3143",
       "Chartered_Organization": "Optimist Club Of Sun Prairie",
       "Metric_Summary__the_number_of_metrics_met_": 2,
-      "Total_Youth__current_": 9,
+      "Total_Youth__current_": 10,
       "Total_Youth__prev__year_": 15,
-      "YOY_Members____": -6,
+      "YOY_Members____": -5,
       "Retention____": 46,
       "Last_Connection_Date": "04/27/2026",
       "Assigned_Commissioners": "",
@@ -320,9 +320,9 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3243",
       "Chartered_Organization": "Veterans Of Foreign Wars Sun Prairie Post #9362",
       "Metric_Summary__the_number_of_metrics_met_": 4,
-      "Total_Youth__current_": 50,
+      "Total_Youth__current_": 51,
       "Total_Youth__prev__year_": 40,
-      "YOY_Members____": 10,
+      "YOY_Members____": 11,
       "Retention____": 75,
       "Last_Connection_Date": "03/07/2026",
       "Assigned_Commissioners": "",
@@ -406,8 +406,8 @@ const PUBLIC_DASHBOARD_DATA={
       "Chartered_Organization": "Columbus Corporation of Sun Prairie",
       "Metric_Summary__the_number_of_metrics_met_": 0,
       "Total_Youth__current_": 19,
-      "Total_Youth__prev__year_": 28,
-      "YOY_Members____": -9,
+      "Total_Youth__prev__year_": 27,
+      "YOY_Members____": -8,
       "Retention____": 39,
       "Last_Connection_Date": "",
       "Assigned_Commissioners": "",
@@ -472,14 +472,14 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Troop",
       "Unit_Number": "47",
       "Chartered_Organization": "Our Saviors Lutheran Church-American",
-      "Metric_Summary__the_number_of_metrics_met_": 4,
+      "Metric_Summary__the_number_of_metrics_met_": 3,
       "Total_Youth__current_": 36,
       "Total_Youth__prev__year_": 36,
       "YOY_Members____": 0,
       "Retention____": 93,
       "Last_Connection_Date": "03/07/2026",
       "Assigned_Commissioners": "",
-      "UL___CC_Trained": "Yes",
+      "UL___CC_Trained": "No",
       "Exceed_Small_Unit_Threshold": "Yes",
       "YOY_Membership_Growth": "Yes",
       "Advancement___Youth_Leadership": "Yes",
@@ -508,8 +508,8 @@ const PUBLIC_DASHBOARD_DATA={
       "Chartered_Organization": "McFarland Lutheran Church",
       "Metric_Summary__the_number_of_metrics_met_": 3,
       "Total_Youth__current_": 14,
-      "Total_Youth__prev__year_": 18,
-      "YOY_Members____": -4,
+      "Total_Youth__prev__year_": 19,
+      "YOY_Members____": -5,
       "Retention____": 77,
       "Last_Connection_Date": "03/10/2025",
       "Assigned_Commissioners": "",
@@ -557,7 +557,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Troop",
       "Unit_Number": "70",
       "Chartered_Organization": "Portage Presbyterian Church",
-      "Metric_Summary__the_number_of_metrics_met_": 1,
+      "Metric_Summary__the_number_of_metrics_met_": 2,
       "Total_Youth__current_": 9,
       "Total_Youth__prev__year_": 16,
       "YOY_Members____": -7,
@@ -567,7 +567,7 @@ const PUBLIC_DASHBOARD_DATA={
       "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "No",
       "YOY_Membership_Growth": "No",
-      "Advancement___Youth_Leadership": "No",
+      "Advancement___Youth_Leadership": "Yes",
       "Outdoor": "No"
     },
     {
@@ -591,7 +591,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Troop",
       "Unit_Number": "88",
       "Chartered_Organization": "Deerfield Lutheran Church",
-      "Metric_Summary__the_number_of_metrics_met_": 4,
+      "Metric_Summary__the_number_of_metrics_met_": 3,
       "Total_Youth__current_": 24,
       "Total_Youth__prev__year_": 28,
       "YOY_Members____": -4,
@@ -602,7 +602,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Exceed_Small_Unit_Threshold": "Yes",
       "YOY_Membership_Growth": "No",
       "Advancement___Youth_Leadership": "Yes",
-      "Outdoor": "Yes"
+      "Outdoor": "No"
     },
     {
       "Unit_Type": "Troop",
@@ -661,8 +661,8 @@ const PUBLIC_DASHBOARD_DATA={
       "Chartered_Organization": "Veterans of Foreign Wars VFW Post 7591",
       "Metric_Summary__the_number_of_metrics_met_": 4,
       "Total_Youth__current_": 26,
-      "Total_Youth__prev__year_": 24,
-      "YOY_Members____": 2,
+      "Total_Youth__prev__year_": 25,
+      "YOY_Members____": 1,
       "Retention____": 125,
       "Last_Connection_Date": "03/13/2026",
       "Assigned_Commissioners": "",
@@ -869,14 +869,6 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "Unit": "Crew 2047",
       "Program": "Venturing",
-      "Position": "Committee Chair",
-      "Direct_Contact_Leader": "NO",
-      "Trained": "NO",
-      "Count": 1
-    },
-    {
-      "Unit": "Crew 2047",
-      "Program": "Venturing",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -1800,7 +1792,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
-      "Count": 4
+      "Count": 5
     },
     {
       "Unit": "Pack 3329",
@@ -1808,7 +1800,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
-      "Count": 3
+      "Count": 2
     },
     {
       "Unit": "Pack 3329",
@@ -2221,14 +2213,6 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "Unit": "Troop 0047",
       "Program": "Scouts BSA",
-      "Position": "Committee Chair",
-      "Direct_Contact_Leader": "NO",
-      "Trained": "YES",
-      "Count": 1
-    },
-    {
-      "Unit": "Troop 0047",
-      "Program": "Scouts BSA",
       "Position": "Unit Scouter Reserve",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
@@ -2351,6 +2335,14 @@ const PUBLIC_DASHBOARD_DATA={
       "Program": "Scouts BSA",
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
+      "Trained": "NO",
+      "Count": 1
+    },
+    {
+      "Unit": "Troop 0053",
+      "Program": "Scouts BSA",
+      "Position": "Assistant Scoutmaster",
+      "Direct_Contact_Leader": "YES",
       "Trained": "NO",
       "Count": 1
     },
@@ -3322,12 +3314,6 @@ const PUBLIC_DASHBOARD_DATA={
     },
     {
       "unittype": "Crew",
-      "unitnumber": "2047",
-      "Status": "Expires ≤ 30 Days",
-      "Count": 1
-    },
-    {
-      "unittype": "Crew",
       "unitnumber": "2127",
       "Status": "Current >90 Days",
       "Count": 7
@@ -3378,13 +3364,7 @@ const PUBLIC_DASHBOARD_DATA={
       "unittype": "Pack",
       "unitnumber": "3053",
       "Status": "Expires 31–60 Days",
-      "Count": 1
-    },
-    {
-      "unittype": "Pack",
-      "unitnumber": "3053",
-      "Status": "Expires 61–90 Days",
-      "Count": 1
+      "Count": 2
     },
     {
       "unittype": "Pack",
@@ -3498,13 +3478,19 @@ const PUBLIC_DASHBOARD_DATA={
       "unittype": "Pack",
       "unitnumber": "3146",
       "Status": "Current >90 Days",
-      "Count": 4
+      "Count": 3
     },
     {
       "unittype": "Pack",
       "unitnumber": "3146",
       "Status": "Expires 31–60 Days",
       "Count": 2
+    },
+    {
+      "unittype": "Pack",
+      "unitnumber": "3146",
+      "Status": "Expires 61–90 Days",
+      "Count": 1
     },
     {
       "unittype": "Pack",
@@ -3515,8 +3501,14 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Pack",
       "unitnumber": "3155",
+      "Status": "Expires 61–90 Days",
+      "Count": 1
+    },
+    {
+      "unittype": "Pack",
+      "unitnumber": "3155",
       "Status": "Current >90 Days",
-      "Count": 6
+      "Count": 5
     },
     {
       "unittype": "Pack",
@@ -3564,13 +3556,13 @@ const PUBLIC_DASHBOARD_DATA={
       "unittype": "Pack",
       "unitnumber": "3329",
       "Status": "Current >90 Days",
-      "Count": 10
+      "Count": 11
     },
     {
       "unittype": "Pack",
       "unitnumber": "3329",
       "Status": "Expires ≤ 30 Days",
-      "Count": 2
+      "Count": 1
     },
     {
       "unittype": "Pack",
@@ -3581,14 +3573,8 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Pack",
       "unitnumber": "3350",
-      "Status": "Expires 61–90 Days",
-      "Count": 1
-    },
-    {
-      "unittype": "Pack",
-      "unitnumber": "3350",
       "Status": "Expires 31–60 Days",
-      "Count": 2
+      "Count": 3
     },
     {
       "unittype": "Pack",
@@ -3677,12 +3663,6 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "unittype": "Troop",
       "unitnumber": "0047",
-      "Status": "Expires ≤ 30 Days",
-      "Count": 1
-    },
-    {
-      "unittype": "Troop",
-      "unitnumber": "0047",
       "Status": "Expires 31–60 Days",
       "Count": 1
     },
@@ -3690,7 +3670,13 @@ const PUBLIC_DASHBOARD_DATA={
       "unittype": "Troop",
       "unitnumber": "0050",
       "Status": "Current >90 Days",
-      "Count": 14
+      "Count": 13
+    },
+    {
+      "unittype": "Troop",
+      "unitnumber": "0050",
+      "Status": "Expires 31–60 Days",
+      "Count": 1
     },
     {
       "unittype": "Troop",
@@ -3792,7 +3778,7 @@ const PUBLIC_DASHBOARD_DATA={
       "unittype": "Troop",
       "unitnumber": "0132",
       "Status": "Current >90 Days",
-      "Count": 15
+      "Count": 16
     },
     {
       "unittype": "Troop",
@@ -3810,7 +3796,7 @@ const PUBLIC_DASHBOARD_DATA={
       "unittype": "Troop",
       "unitnumber": "0132",
       "Status": "Expires 31–60 Days",
-      "Count": 2
+      "Count": 1
     },
     {
       "unittype": "Troop",
@@ -3834,13 +3820,19 @@ const PUBLIC_DASHBOARD_DATA={
       "unittype": "Troop",
       "unitnumber": "0155",
       "Status": "Current >90 Days",
-      "Count": 22
+      "Count": 21
     },
     {
       "unittype": "Troop",
       "unitnumber": "0155",
       "Status": "Expires 31–60 Days",
       "Count": 2
+    },
+    {
+      "unittype": "Troop",
+      "unitnumber": "0155",
+      "Status": "Expires 61–90 Days",
+      "Count": 1
     },
     {
       "unittype": "Troop",
@@ -3906,7 +3898,7 @@ const PUBLIC_DASHBOARD_DATA={
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "06/30/2027",
       "Total_Youth": 7,
-      "Total_Adults": 6,
+      "Total_Adults": 5,
       "Last_Modified": "07/15/2026"
     },
     {
@@ -4114,7 +4106,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 51,
+      "Total_Youth": 52,
       "Total_Adults": 13,
       "Last_Modified": ""
     },
@@ -4136,7 +4128,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 10,
+      "Total_Youth": 11,
       "Total_Adults": 6,
       "Last_Modified": ""
     },
@@ -4225,7 +4217,7 @@ const PUBLIC_DASHBOARD_DATA={
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
       "Total_Youth": 36,
-      "Total_Adults": 19,
+      "Total_Adults": 18,
       "Last_Modified": ""
     },
     {
