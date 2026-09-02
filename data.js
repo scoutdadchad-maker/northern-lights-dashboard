@@ -1,6 +1,6 @@
 const PUBLIC_DASHBOARD_DATA={
-  "schemaVersion": "12.8-NL",
-  "generatedAt": "2026-09-02T11:18:08.792Z",
+  "schemaVersion": "12.8.1-NL",
+  "generatedAt": "2026-09-02T11:33:03.454Z",
   "council": "Glacier's Edge Council",
   "district": "Northern Lights 07",
   "summary": {

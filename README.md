@@ -33,3 +33,9 @@ Use Admin locally, generate `data.js`, replace `viewer/data.js`, and publish onl
 
 ## v12.8 sortable tables
 All dashboard table headers are clickable and keyboard-accessible. Click once for ascending order and again for descending. Numeric fields sort numerically; dates sort chronologically; unit names use natural-number sorting; health sorts Red → Yellow → Green.
+
+
+## v12.8.1 Fix
+- Restores and hardens clickable KPI cards across Unit Metrics, Membership, Trained Leaders, SYT, and Charter Renewal.
+- KPI interactions now use delegated event handling so they survive dashboard re-renders and sorting.
+- Retains v12.8 sortable table headers and all v12.7 filters/drill-down behavior.
