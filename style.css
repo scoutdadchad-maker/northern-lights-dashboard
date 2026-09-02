@@ -32,3 +32,25 @@ nav{margin-top:14px;padding-top:10px;border-top:1px solid #173047}.nav{display:f
 .metric-filter-banner button{border:1px solid #3d7fba;border-radius:8px;background:#123b5d;color:#fff;font-weight:700;padding:8px 12px;cursor:pointer}
 .metric-filter-banner button:hover{background:#18507d}
 .empty-filter-row{text-align:center!important;padding:28px!important;color:#9eb9cf!important;font-style:italic}
+
+/* v12.7 clickable dashboard KPI filters */
+.kpi-filter{position:relative;width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer;appearance:none;transition:border-color .16s ease,background .16s ease,transform .16s ease}
+.kpi-filter .kpi-arrow{position:absolute;right:10px;top:9px;font-style:normal;font-size:18px;color:#61829c;transition:color .16s ease,transform .16s ease}
+.kpi-filter:hover{border-color:#438bc2;background:#0a2031;transform:translateY(-1px)}
+.kpi-filter:hover .kpi-arrow{color:#8bc8f5;transform:translateX(2px)}
+.kpi-filter:focus-visible{outline:2px solid #69bfff;outline-offset:2px}
+.kpi-filter.selected{border-color:#5eb9ff;box-shadow:inset 0 0 0 1px #2e7db6;background:#0b263b}
+.kpi-filter.selected.green{border-color:var(--green);box-shadow:inset 0 0 0 1px #267344;background:#0a281a}
+.kpi-filter.selected.yellow{border-color:var(--yellow);box-shadow:inset 0 0 0 1px #8a671b;background:#2a2109}
+.kpi-filter.selected.red{border-color:var(--red);box-shadow:inset 0 0 0 1px #8d3436;background:#2b1215}
+.kpi-filter-banner{margin-top:-4px;margin-bottom:12px}
+
+
+/* v12.8 sortable table headers */
+th.sortable-th{cursor:pointer;user-select:none;position:relative;padding-right:28px!important;transition:background .15s ease,color .15s ease}
+th.sortable-th::after{content:'↕';position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--muted);opacity:.55}
+th.sortable-th:hover,th.sortable-th:focus{background:#162b40;color:#fff;outline:none}
+th.sortable-th:focus-visible{box-shadow:inset 0 0 0 2px var(--blue)}
+th.sortable-th.sort-asc::after{content:'▲';color:var(--blue);opacity:1}
+th.sortable-th.sort-desc::after{content:'▼';color:var(--blue);opacity:1}
+th.sortable-th[aria-sort="ascending"],th.sortable-th[aria-sort="descending"]{color:#fff;background:#13283d}
