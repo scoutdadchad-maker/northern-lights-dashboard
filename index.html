@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Northern Lights District Command Center</title><link rel="stylesheet" href="style.css"></head><body class="viewer">
 <div class="app"><aside class="sidebar"><div class="brand"><div class="eyebrow">Glacier's Edge Council</div><h1>NORTHERN LIGHTS</h1><p>District Command Center</p></div>
 <div class="scope-panel"><div class="file-title">Dashboard Scope</div><button id="councilScopeBtn" class="scope-btn active">Northern Lights Overview</button><label>Unit<select id="unitSelect"><option value="">All Northern Lights Units</option></select></label><div id="scopeLabel" class="scope-label">Northern Lights District</div></div>
-<nav><button class="nav active" data-view="overview"><span class="nav-icon">⌂</span><span><b>Overview</b><small>District / unit</small></span></button><button class="nav" data-view="metrics"><span class="nav-icon">▥</span><span><b>Unit Metrics</b><small>Five health indicators</small></span></button><button class="nav" data-view="membership"><span class="nav-icon">●</span><span><b>Membership</b><small>Youth & adult status</small></span></button><button class="nav" data-view="training"><span class="nav-icon">♟</span><span><b>Trained Leaders</b><small>Direct-contact training</small></span></button><button class="nav" data-view="syt"><span class="nav-icon">◇</span><span><b>Safeguarding Youth</b><small>SYT current & aging</small></span></button><button class="nav" data-view="charter"><span class="nav-icon">✓</span><span><b>Charter Renewal</b><small>Renewal readiness</small></span></button></nav>
+<nav><button class="nav active" data-view="overview"><span class="nav-icon">⌂</span><span><b>Overview</b><small>District / unit</small></span></button><button class="nav" data-view="metrics"><span class="nav-icon">▥</span><span><b>Unit Metrics</b><small>Five health indicators</small></span></button><button class="nav" data-view="membership"><span class="nav-icon">●</span><span><b>Membership</b><small>Youth & adult status</small></span></button><button class="nav" data-view="training"><span class="nav-icon">♟</span><span><b>Trained Leaders</b><small>Direct-contact training</small></span></button><button class="nav" data-view="syt"><span class="nav-icon">◇</span><span><b>Safeguarding Youth</b><small>SYT current & aging</small></span></button><button class="nav" data-view="charter"><span class="nav-icon">✓</span><span><b>Charter Renewal</b><small>Renewal readiness</small></span></button><button class="nav" data-view="commissioners"><span class="nav-icon">◎</span><span><b>Commissioner Corps</b><small>Structure & assignments</small></span></button></nav>
 <div id="adminSources" class="file-panel"><div class="file-title">Northern Lights Data Sources</div><label class="filebox"><span><b>Unit Metrics</b><small id="metricsStatus">Not loaded</small></span><input id="metricsFile" type="file" accept=".csv"><i>Upload</i></label><label class="filebox"><span><b>Trained Leaders</b><small id="trainingStatus">Not loaded</small></span><input id="trainingFile" type="file" accept=".csv"><i>Upload</i></label><label class="filebox"><span><b>Safeguarding Youth</b><small id="sytStatus">Not loaded</small></span><input id="sytFile" type="file" accept=".csv"><i>Upload</i></label><label class="filebox"><span><b>Charter Renewal</b><small id="charterStatus">Not loaded</small></span><input id="charterFile" type="file" accept=".csv"><i>Upload</i></label><label class="filebox"><span><b>Membership</b><small id="membershipStatus">Not loaded</small></span><input id="membershipFile" type="file" accept=".csv"><i>Upload</i></label></div>
 <div id="viewerNote" class="privacy" hidden>VIEW ONLY • Sanitized published data</div><div id="adminNote" class="privacy">ADMIN • CSVs stay in this browser</div></aside>
 <main class="main"><header class="topbar"><div class="command-title"><div id="viewEyebrow" class="eyebrow">Northern Lights Overview</div><h2 id="viewTitle">Northern Lights District</h2></div><div class="top-actions"><div class="scope-readout"><span>Current Scope</span><strong id="scopeTop">Northern Lights District</strong></div><button id="attentionBtn" class="attention-toggle"><span>⚑</span> Needs Attention</button></div></header><div class="meta"><span id="metaScope">Northern Lights District</span><span id="metaDate"></span><span id="dataState"></span></div>
@@ -31,4 +31,94 @@
 <section id="trainingView" class="view" hidden><div id="trainingKpis" class="kpis"></div><section class="card"><div class="eyebrow">Direct Contact Training</div><h3>By Program</h3><div id="trainingBars" class="bars"></div></section><section class="card"><div class="tablewrap"><table><thead><tr><th data-sort-type="text">District</th><th data-sort-type="unit">Unit</th><th data-sort-type="text">Position / Program</th><th data-sort-type="yesno">Direct</th><th data-sort-type="yesno">Trained</th><th data-sort-type="number">Count</th></tr></thead><tbody id="trainingRows"></tbody></table></div></section></section>
 <section id="sytView" class="view" hidden><div id="sytKpis" class="kpis"></div><section class="card"><div class="eyebrow">SYT Aging</div><h3>Registration Records</h3><div id="sytBands" class="aging-bands"></div></section><section class="card"><div class="tablewrap"><table><thead><tr><th data-sort-type="text">District</th><th data-sort-type="unit">Unit</th><th data-sort-type="syt">Status</th><th data-sort-type="number">Count</th></tr></thead><tbody id="sytRows"></tbody></table></div></section></section>
 <section id="charterView" class="view" hidden><div id="charterKpis" class="kpis"></div><section class="card"><div class="eyebrow">Renewal Aging</div><h3>Charter Status</h3><div id="charterBands" class="aging-bands"></div></section><section class="card"><div class="tablewrap"><table><thead><tr><th data-sort-type="text">District</th><th data-sort-type="unit">Unit</th><th data-sort-type="text">Chartered Organization</th><th data-sort-type="text">Status</th><th data-sort-type="date">Expiry</th><th data-sort-type="number">Youth</th><th data-sort-type="number">Adults</th></tr></thead><tbody id="charterRows"></tbody></table></div></section></section>
+
+<section id="commissionersView" class="view" hidden>
+  <div class="commissioner-hero card">
+    <div>
+      <div class="eyebrow">Northern Lights District</div>
+      <h2>Commissioner Structure</h2>
+      <p>Supporting Strong Units Across Our District</p>
+      <small>A comprehensive view of commissioner leadership, regional coverage, unit assignments, Roundtable support, and recruiting needs.</small>
+    </div>
+    <div class="commissioner-summary">
+      <div><strong>1</strong><span>District Commissioner</span></div>
+      <div><strong>3</strong><span>Assistant District Commissioners</span></div>
+      <div><strong>15</strong><span>Unit Commissioners / Open Roles</span></div>
+      <div><strong>47</strong><span>Units Served</span></div>
+    </div>
+  </div>
+
+  <div class="commissioner-layout">
+    <div class="commissioner-main">
+      <section class="card leader-card">
+        <div class="panel-heading"><div><div class="eyebrow">District Leadership</div><h3>District Commissioner</h3></div><span class="leadership-badge">Districtwide</span></div>
+        <div class="leader-profile">
+          <div class="leader-initials">CB</div>
+          <div><h3>Chad Brummund</h3><p>Leads the commissioner corps and ensures consistent service across all regions.</p></div>
+        </div>
+        <div class="responsibility-grid">
+          <span>Recruit & train commissioners</span><span>Ensure unit visits & support</span><span>Coordinate with district leadership</span><span>Support unit retention efforts</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="panel-heading"><div><div class="eyebrow">Regional Coverage</div><h3>Assistant District Commissioners & Unit Assignments</h3></div><span class="panel-caption">Click a unit to open its 360° profile</span></div>
+        <div class="region-grid">
+          <article class="region-card">
+            <div class="region-head"><div><span class="region-dot east"></span><b>Eastern Central Region</b></div><span class="recruiting-badge">ADC Recruiting</span></div>
+            <div class="commissioner-assignment"><strong>Michael Wallace</strong><div class="assignment-units" data-units="P3145,T145,T76,P3076"></div></div>
+            <div class="commissioner-assignment"><strong>Dennis Tiedt</strong><div class="assignment-units" data-units="P3088,T88"></div></div>
+            <div class="commissioner-assignment"><strong>Steven Kimball</strong><div class="assignment-units" data-units="P3005,T5,P3127,T127,T146"></div></div>
+          </article>
+          <article class="region-card">
+            <div class="region-head"><div><span class="region-dot northcentral"></span><b>North Central Region</b></div><span class="recruiting-badge">ADC Recruiting</span></div>
+            <div class="commissioner-assignment open"><strong>Open Unit Commissioner</strong><div class="assignment-units" data-units="P3143,P3243,P3543,P3099,T99"></div></div>
+            <div class="commissioner-assignment open"><strong>Open Unit Commissioner</strong><div class="assignment-units" data-units="T35,P3035,T155,P3155"></div></div>
+            <div class="commissioner-assignment open"><strong>Open Unit Commissioner</strong><div class="assignment-units" data-units="T47,T68,T333,P3368"></div></div>
+          </article>
+          <article class="region-card">
+            <div class="region-head"><div><span class="region-dot south"></span><b>Southern Region</b></div><span class="filled-badge">ADC Jerry Pfeffer</span></div>
+            <div class="commissioner-assignment"><strong>Jeanne Braun</strong><div class="assignment-units" data-units="P3132,T132"></div></div>
+            <div class="commissioner-assignment"><strong>Kris Whitman</strong><div class="assignment-units" data-units="P3329,T29"></div></div>
+            <div class="commissioner-assignment"><strong>Amy Steinmetz</strong><div class="assignment-units" data-units="P3161,T50,T168"></div></div>
+            <div class="commissioner-assignment"><strong>Dan Maahs</strong><div class="assignment-units" data-units="T53"></div></div>
+            <div class="commissioner-assignment"><strong>Jim Kleckner</strong><div class="assignment-units" data-units="P3053,T164,P3350,T167"></div></div>
+          </article>
+          <article class="region-card">
+            <div class="region-head"><div><span class="region-dot north"></span><b>Northern Region</b></div><span class="filled-badge">ADC Melissa Hall</span></div>
+            <div class="commissioner-assignment"><strong>Mary Bobiak</strong><div class="assignment-units" data-units="P3070,T70,P3079,T66,T7066"></div></div>
+            <div class="commissioner-assignment"><strong>Cory Skolaski</strong><div class="assignment-units" data-units="P3377"></div></div>
+            <div class="commissioner-assignment"><strong>Amber Skolaski</strong><div class="assignment-units" data-units="T113"></div></div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <aside class="commissioner-side">
+      <section class="card support-card">
+        <div class="eyebrow">Roundtable Leadership</div><h3>Just-in-Time Leader Support</h3>
+        <p>Program ideas, training, resources, and networking for unit leaders.</p>
+        <div class="support-person"><span>ADC – Roundtables</span><strong>Sarina Brummund</strong></div>
+        <div class="support-person"><span>Roundtable Commissioners</span><strong>Cory Skolaski<br>Amy Steinmetz</strong></div>
+        <div class="support-person"><span>Assistant Roundtable Commissioners</span><strong>Greg Porter<br>Allen Porter</strong></div>
+      </section>
+      <section class="card support-card">
+        <div class="eyebrow">Venture Crew Support</div><h3>ADC – Venture Crews</h3>
+        <div class="support-person"><strong>Dennis Tiedt</strong></div>
+        <p>High adventure • Leadership development • Specialized skills • Service & community involvement</p>
+        <div class="crew-links assignment-units" data-units="C1911,C2047,C2127"></div>
+      </section>
+      <section class="card mission-card">
+        <div class="eyebrow">Our Mission</div><h3>Strong Units Through Service</h3>
+        <ul><li>Support quality unit programs</li><li>Provide regular contact and guidance</li><li>Solve problems quickly</li><li>Strengthen communication across all units</li></ul>
+      </section>
+      <section class="card recruiting-card">
+        <div class="eyebrow red-eyebrow">Join the Team</div><h3>Commissioners Needed</h3>
+        <p>We are actively recruiting Commissioners so every Northern Lights unit receives consistent support.</p>
+        <a href="mailto:scoutdadchad@gmail.com">scoutdadchad@gmail.com</a>
+      </section>
+    </aside>
+  </div>
+</section>
+
 </main></div><script src="data.js"></script><script src="script.js"></script></body></html>

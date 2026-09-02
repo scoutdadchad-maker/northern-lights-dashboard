@@ -1,3 +1,20 @@
+# Northern Lights District Command Center v12.10
+
+## New: Commissioner Structure Dashboard
+
+Adds a dedicated **Commissioner Corps** dashboard with:
+- District Commissioner leadership and responsibilities
+- Four geographic regions with ADC status
+- Unit Commissioner assignments
+- Clearly highlighted recruiting/open roles
+- Roundtable leadership
+- Venture Crew support
+- Commissioner Corps summary and mission
+- Commissioner recruiting contact
+- Clickable assigned-unit pills that open the unit's 360° profile when that unit exists in the loaded active-unit roster
+
+All v12.8.1 functionality remains: clickable KPI filters, sortable tables, metric exception filters, unit drill-down, dark command-center design, and sanitized Viewer publishing.
+
 # Northern Lights District Command Center v12.8
 
 District-specific version of the Glacier's Edge Council Command Center v12.5.
