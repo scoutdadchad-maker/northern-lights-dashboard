@@ -1,6 +1,6 @@
 const PUBLIC_DASHBOARD_DATA={
-  "schemaVersion": "12.10-NL",
-  "generatedAt": "2026-09-07T11:47:53.136Z",
+  "schemaVersion": "12.10.3-NL",
+  "generatedAt": "2026-09-11T13:41:32.242Z",
   "council": "Glacier's Edge Council",
   "district": "Northern Lights 07",
   "summary": {
@@ -3761,7 +3761,14 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3005",
       "Status": "Current >90 Days",
-      "Count": 2
+      "Count": 1
+    },
+    {
+      "District": "Northern Lights 07",
+      "Unit_Type": "Pack",
+      "Unit_Number": "3005",
+      "Status": "Expires 31–60 Days",
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -3817,14 +3824,14 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3076",
       "Status": "Expired / Not Current",
-      "Count": 1
+      "Count": 2
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
       "Unit_Number": "3076",
       "Status": "Expires ≤30 Days",
-      "Count": 3
+      "Count": 2
     },
     {
       "District": "Northern Lights 07",
@@ -3943,14 +3950,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3146",
       "Status": "Expires ≤30 Days",
-      "Count": 1
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
-      "Unit_Number": "3146",
-      "Status": "Expires 31–60 Days",
-      "Count": 1
+      "Count": 2
     },
     {
       "District": "Northern Lights 07",
@@ -4006,21 +4006,28 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3243",
       "Status": "Expires ≤30 Days",
-      "Count": 2
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
-      "Unit_Number": "3243",
-      "Status": "Expires 61–90 Days",
-      "Count": 2
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
       "Unit_Number": "3243",
       "Status": "Expires 31–60 Days",
-      "Count": 2
+      "Count": 3
+    },
+    {
+      "District": "Northern Lights 07",
+      "Unit_Type": "Pack",
+      "Unit_Number": "3243",
+      "Status": "Expired / Not Current",
+      "Count": 1
+    },
+    {
+      "District": "Northern Lights 07",
+      "Unit_Type": "Pack",
+      "Unit_Number": "3243",
+      "Status": "Expires 61–90 Days",
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -4230,20 +4237,13 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Troop",
       "Unit_Number": "0076",
       "Status": "Expired / Not Current",
-      "Count": 1
+      "Count": 2
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Troop",
       "Unit_Number": "0076",
       "Status": "Expires 31–60 Days",
-      "Count": 1
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Troop",
-      "Unit_Number": "0076",
-      "Status": "Expires ≤30 Days",
       "Count": 1
     },
     {

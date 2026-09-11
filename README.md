@@ -56,3 +56,15 @@ All dashboard table headers are clickable and keyboard-accessible. Click once fo
 - Restores and hardens clickable KPI cards across Unit Metrics, Membership, Trained Leaders, SYT, and Charter Renewal.
 - KPI interactions now use delegated event handling so they survive dashboard re-renders and sorting.
 - Retains v12.8 sortable table headers and all v12.7 filters/drill-down behavior.
+
+
+## Updated Date
+Admin and Viewer now display an **Updated** date in the header. Published Viewer data uses the generatedAt timestamp, so the date reflects when the sanitized dataset was generated.
+
+
+## Adult Count Clarity
+Adult figures are explicitly separated into **Unique Registered Adults** (deduplicated people by Member ID) and **Adult Registrations** (unit-registration records that can include the same person more than once). Membership now shows both values and includes an on-screen definition note. Charter adult totals are labeled as registrations.
+
+
+## Membership Overview Accuracy Fix
+The Overview membership card no longer displays a combined registration-record total as membership. It now shows Current Youth and Unique Registered Adults separately. Renewal/expiration values are explicitly labeled as registration records. A combined unique-person total is intentionally omitted because the Membership export does not contain youth Member IDs needed to deduplicate youth across units.
