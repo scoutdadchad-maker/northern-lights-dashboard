@@ -1,15 +1,15 @@
 const PUBLIC_DASHBOARD_DATA={
   "schemaVersion": "12.10.3-NL",
-  "generatedAt": "2026-09-11T13:41:32.242Z",
+  "generatedAt": "2026-09-14T01:30:43.381Z",
   "council": "Glacier's Edge Council",
   "district": "Northern Lights 07",
   "summary": {
     "districts": 1,
     "units": 47,
     "adults": {
-      "council": 427,
+      "council": 422,
       "byDistrict": {
-        "Northern Lights 07": 427
+        "Northern Lights 07": 422
       },
       "byUnit": {
         "northern lights 07|crew|1911": 4,
@@ -28,7 +28,7 @@ const PUBLIC_DASHBOARD_DATA={
         "northern lights 07|pack|3143": 5,
         "northern lights 07|pack|3145": 9,
         "northern lights 07|pack|3146": 6,
-        "northern lights 07|pack|3155": 9,
+        "northern lights 07|pack|3155": 8,
         "northern lights 07|pack|3161": 15,
         "northern lights 07|pack|3243": 13,
         "northern lights 07|pack|3329": 12,
@@ -37,8 +37,8 @@ const PUBLIC_DASHBOARD_DATA={
         "northern lights 07|pack|3377": 8,
         "northern lights 07|pack|3543": 5,
         "northern lights 07|troop|5": 3,
-        "northern lights 07|troop|29": 11,
-        "northern lights 07|troop|35": 21,
+        "northern lights 07|troop|29": 10,
+        "northern lights 07|troop|35": 19,
         "northern lights 07|troop|47": 21,
         "northern lights 07|troop|50": 17,
         "northern lights 07|troop|53": 13,
@@ -141,9 +141,9 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3035",
       "Chartered_Organization": "Christ Lutheran Church",
       "Metric_Summary__the_number_of_metrics_met_": 3,
-      "Total_Youth__current_": 37,
+      "Total_Youth__current_": 40,
       "Total_Youth__prev__year_": 46,
-      "YOY_Members____": -9,
+      "YOY_Members____": -6,
       "Retention____": 65,
       "Last_Connection_Date": "01/20/2026",
       "Assigned_Commissioners": "",
@@ -195,9 +195,9 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3076",
       "Chartered_Organization": "Holy Trinity Lutheran Church",
       "Metric_Summary__the_number_of_metrics_met_": 4,
-      "Total_Youth__current_": 26,
-      "Total_Youth__prev__year_": 17,
-      "YOY_Members____": 9,
+      "Total_Youth__current_": 28,
+      "Total_Youth__prev__year_": 21,
+      "YOY_Members____": 7,
       "Retention____": 70,
       "Last_Connection_Date": "09/04/2026",
       "Assigned_Commissioners": "",
@@ -253,7 +253,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Total_Youth__prev__year_": 19,
       "YOY_Members____": 2,
       "Retention____": 61,
-      "Last_Connection_Date": "09/04/2026",
+      "Last_Connection_Date": "09/10/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "No",
       "Exceed_Small_Unit_Threshold": "Yes",
@@ -271,7 +271,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Total_Youth__prev__year_": 13,
       "YOY_Members____": -2,
       "Retention____": 53,
-      "Last_Connection_Date": "08/21/2026",
+      "Last_Connection_Date": "09/10/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "No",
       "Exceed_Small_Unit_Threshold": "No",
@@ -286,8 +286,8 @@ const PUBLIC_DASHBOARD_DATA={
       "Chartered_Organization": "Veterans of Foreign Wars VFW Post 7591",
       "Metric_Summary__the_number_of_metrics_met_": 3,
       "Total_Youth__current_": 25,
-      "Total_Youth__prev__year_": 25,
-      "YOY_Members____": 0,
+      "Total_Youth__prev__year_": 28,
+      "YOY_Members____": -3,
       "Retention____": 72,
       "Last_Connection_Date": "03/13/2026",
       "Assigned_Commissioners": "",
@@ -302,14 +302,14 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3143",
       "Chartered_Organization": "Optimist Club Of Sun Prairie",
-      "Metric_Summary__the_number_of_metrics_met_": 2,
+      "Metric_Summary__the_number_of_metrics_met_": 1,
       "Total_Youth__current_": 9,
       "Total_Youth__prev__year_": 16,
       "YOY_Members____": -7,
       "Retention____": 33,
-      "Last_Connection_Date": "04/27/2026",
+      "Last_Connection_Date": "07/10/2026",
       "Assigned_Commissioners": "",
-      "UL___CC_Trained": "Yes",
+      "UL___CC_Trained": "No",
       "Exceed_Small_Unit_Threshold": "No",
       "YOY_Membership_Growth": "No",
       "Advancement___Youth_Leadership": "Yes",
@@ -361,7 +361,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Total_Youth__prev__year_": 15,
       "YOY_Members____": 0,
       "Retention____": 71,
-      "Last_Connection_Date": "04/26/2025",
+      "Last_Connection_Date": "08/16/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "No",
@@ -375,9 +375,9 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3161",
       "Chartered_Organization": "Christ Lutheran Church",
       "Metric_Summary__the_number_of_metrics_met_": 3,
-      "Total_Youth__current_": 23,
+      "Total_Youth__current_": 24,
       "Total_Youth__prev__year_": 35,
-      "YOY_Members____": -12,
+      "YOY_Members____": -11,
       "Retention____": 57,
       "Last_Connection_Date": "03/21/2025",
       "Assigned_Commissioners": "",
@@ -393,11 +393,11 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3243",
       "Chartered_Organization": "Veterans Of Foreign Wars Sun Prairie Post #9362",
       "Metric_Summary__the_number_of_metrics_met_": 4,
-      "Total_Youth__current_": 56,
-      "Total_Youth__prev__year_": 42,
-      "YOY_Members____": 14,
+      "Total_Youth__current_": 59,
+      "Total_Youth__prev__year_": 44,
+      "YOY_Members____": 15,
       "Retention____": 78,
-      "Last_Connection_Date": "03/07/2026",
+      "Last_Connection_Date": "08/22/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "Yes",
@@ -410,14 +410,14 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3329",
       "Chartered_Organization": "Common Grace",
-      "Metric_Summary__the_number_of_metrics_met_": 2,
-      "Total_Youth__current_": 34,
-      "Total_Youth__prev__year_": 35,
-      "YOY_Members____": -1,
+      "Metric_Summary__the_number_of_metrics_met_": 3,
+      "Total_Youth__current_": 35,
+      "Total_Youth__prev__year_": 37,
+      "YOY_Members____": -2,
       "Retention____": 58,
-      "Last_Connection_Date": "03/04/2026",
+      "Last_Connection_Date": "09/08/2026",
       "Assigned_Commissioners": "",
-      "UL___CC_Trained": "No",
+      "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "Yes",
       "YOY_Membership_Growth": "No",
       "Advancement___Youth_Leadership": "Yes",
@@ -429,9 +429,9 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3350",
       "Chartered_Organization": "One Community Bank",
       "Metric_Summary__the_number_of_metrics_met_": 4,
-      "Total_Youth__current_": 30,
+      "Total_Youth__current_": 33,
       "Total_Youth__prev__year_": 50,
-      "YOY_Members____": -20,
+      "YOY_Members____": -17,
       "Retention____": 36,
       "Last_Connection_Date": "02/21/2026",
       "Assigned_Commissioners": "",
@@ -482,15 +482,15 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3543",
       "Chartered_Organization": "Columbus Corporation of Sun Prairie",
-      "Metric_Summary__the_number_of_metrics_met_": 0,
-      "Total_Youth__current_": 19,
-      "Total_Youth__prev__year_": 28,
-      "YOY_Members____": -9,
+      "Metric_Summary__the_number_of_metrics_met_": 1,
+      "Total_Youth__current_": 21,
+      "Total_Youth__prev__year_": 31,
+      "YOY_Members____": -10,
       "Retention____": 40,
       "Last_Connection_Date": "",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "No",
-      "Exceed_Small_Unit_Threshold": "No",
+      "Exceed_Small_Unit_Threshold": "Yes",
       "YOY_Membership_Growth": "No",
       "Advancement___Youth_Leadership": "No",
       "Outdoor": "No"
@@ -541,7 +541,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Total_Youth__prev__year_": 38,
       "YOY_Members____": 3,
       "Retention____": 97,
-      "Last_Connection_Date": "02/01/2026",
+      "Last_Connection_Date": "08/31/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "Yes",
@@ -559,7 +559,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Total_Youth__prev__year_": 36,
       "YOY_Members____": 0,
       "Retention____": 94,
-      "Last_Connection_Date": "03/07/2026",
+      "Last_Connection_Date": "09/02/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "Yes",
@@ -739,7 +739,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Total_Youth__prev__year_": 14,
       "YOY_Members____": 0,
       "Retention____": 122,
-      "Last_Connection_Date": "08/13/2026",
+      "Last_Connection_Date": "09/03/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "Yes",
@@ -829,7 +829,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Total_Youth__prev__year_": 10,
       "YOY_Members____": -2,
       "Retention____": 70,
-      "Last_Connection_Date": "",
+      "Last_Connection_Date": "09/02/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "No",
@@ -883,7 +883,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Total_Youth__prev__year_": 58,
       "YOY_Members____": -12,
       "Retention____": 78,
-      "Last_Connection_Date": "03/07/2026",
+      "Last_Connection_Date": "09/10/2026",
       "Assigned_Commissioners": "",
       "UL___CC_Trained": "Yes",
       "Exceed_Small_Unit_Threshold": "Yes",
@@ -1826,15 +1826,6 @@ const PUBLIC_DASHBOARD_DATA={
       "Program": "Cub Scouts",
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
-      "Trained": "NO",
-      "Count": 1
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit": "Pack 3155",
-      "Program": "Cub Scouts",
-      "Position": "Committee Member",
-      "Direct_Contact_Leader": "NO",
       "Trained": "YES",
       "Count": 4
     },
@@ -1944,7 +1935,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
-      "Count": 5
+      "Count": 4
     },
     {
       "District": "Northern Lights 07",
@@ -1971,7 +1962,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Asst. Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
-      "Count": 1
+      "Count": 2
     },
     {
       "District": "Northern Lights 07",
@@ -2016,7 +2007,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Den Leader",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
-      "Count": 5
+      "Count": 4
     },
     {
       "District": "Northern Lights 07",
@@ -2031,9 +2022,18 @@ const PUBLIC_DASHBOARD_DATA={
       "District": "Northern Lights 07",
       "Unit": "Pack 3329",
       "Program": "Cub Scouts",
+      "Position": "Chartered Organization Rep.",
+      "Direct_Contact_Leader": "NO",
+      "Trained": "NO",
+      "Count": 1
+    },
+    {
+      "District": "Northern Lights 07",
+      "Unit": "Pack 3329",
+      "Program": "Cub Scouts",
       "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
-      "Trained": "NO",
+      "Trained": "YES",
       "Count": 1
     },
     {
@@ -2259,7 +2259,16 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
-      "Count": 1
+      "Count": 2
+    },
+    {
+      "District": "Northern Lights 07",
+      "Unit": "Pack 3543",
+      "Program": "Cub Scouts",
+      "Position": "Den Leader",
+      "Direct_Contact_Leader": "YES",
+      "Trained": "NO",
+      "Count": 2
     },
     {
       "District": "Northern Lights 07",
@@ -2274,7 +2283,7 @@ const PUBLIC_DASHBOARD_DATA={
       "District": "Northern Lights 07",
       "Unit": "Pack 3543",
       "Program": "Cub Scouts",
-      "Position": "Den Leader",
+      "Position": "Cubmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
       "Count": 1
@@ -2340,7 +2349,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Assistant Scoutmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
-      "Count": 2
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -2394,7 +2403,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
-      "Count": 10
+      "Count": 9
     },
     {
       "District": "Northern Lights 07",
@@ -2421,7 +2430,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Unit Scouter Reserve",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
-      "Count": 2
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -2439,7 +2448,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Assistant Scoutmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "NO",
-      "Count": 2
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -2520,7 +2529,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
-      "Count": 3
+      "Count": 4
     },
     {
       "District": "Northern Lights 07",
@@ -2574,15 +2583,6 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Scoutmaster",
       "Direct_Contact_Leader": "YES",
       "Trained": "YES",
-      "Count": 1
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit": "Troop 0050",
-      "Program": "Scouts BSA",
-      "Position": "Committee Member",
-      "Direct_Contact_Leader": "NO",
-      "Trained": "NO",
       "Count": 1
     },
     {
@@ -3177,7 +3177,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
-      "Count": 3
+      "Count": 4
     },
     {
       "District": "Northern Lights 07",
@@ -3186,15 +3186,6 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Chartered Organization Rep.",
       "Direct_Contact_Leader": "NO",
       "Trained": "YES",
-      "Count": 1
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit": "Troop 0132",
-      "Program": "Scouts BSA",
-      "Position": "Committee Member",
-      "Direct_Contact_Leader": "NO",
-      "Trained": "NO",
       "Count": 1
     },
     {
@@ -3222,7 +3213,16 @@ const PUBLIC_DASHBOARD_DATA={
       "Position": "Committee Member",
       "Direct_Contact_Leader": "NO",
       "Trained": "NO",
-      "Count": 2
+      "Count": 1
+    },
+    {
+      "District": "Northern Lights 07",
+      "Unit": "Troop 0145",
+      "Program": "Scouts BSA",
+      "Position": "Committee Member",
+      "Direct_Contact_Leader": "NO",
+      "Trained": "YES",
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -3740,20 +3740,20 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Crew",
       "Unit_Number": "2127",
       "Status": "Current >90 Days",
-      "Count": 6
+      "Count": 5
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Crew",
       "Unit_Number": "2127",
       "Status": "Expires 61–90 Days",
-      "Count": 1
+      "Count": 2
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Crew",
       "Unit_Number": "2127",
-      "Status": "Expires 31–60 Days",
+      "Status": "Expires ≤30 Days",
       "Count": 1
     },
     {
@@ -3787,13 +3787,6 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
-      "Unit_Number": "3035",
-      "Status": "Expires 31–60 Days",
-      "Count": 1
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
       "Unit_Number": "3053",
       "Status": "Current >90 Days",
       "Count": 7
@@ -3817,21 +3810,14 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3076",
       "Status": "Current >90 Days",
-      "Count": 4
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
-      "Unit_Number": "3076",
-      "Status": "Expired / Not Current",
-      "Count": 2
+      "Count": 7
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
       "Unit_Number": "3076",
       "Status": "Expires ≤30 Days",
-      "Count": 2
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -3845,14 +3831,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3088",
       "Status": "Current >90 Days",
-      "Count": 3
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
-      "Unit_Number": "3088",
-      "Status": "Expires ≤30 Days",
-      "Count": 1
+      "Count": 4
     },
     {
       "District": "Northern Lights 07",
@@ -3865,15 +3844,8 @@ const PUBLIC_DASHBOARD_DATA={
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
       "Unit_Number": "3099",
-      "Status": "Expires 61–90 Days",
-      "Count": 1
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
-      "Unit_Number": "3099",
       "Status": "Expires 31–60 Days",
-      "Count": 1
+      "Count": 2
     },
     {
       "District": "Northern Lights 07",
@@ -3907,7 +3879,7 @@ const PUBLIC_DASHBOARD_DATA={
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
       "Unit_Number": "3132",
-      "Status": "Expires 31–60 Days",
+      "Status": "Expires ≤30 Days",
       "Count": 1
     },
     {
@@ -3915,7 +3887,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3143",
       "Status": "Current >90 Days",
-      "Count": 5
+      "Count": 4
     },
     {
       "District": "Northern Lights 07",
@@ -3979,13 +3951,6 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "3155",
       "Status": "Current >90 Days",
       "Count": 6
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
-      "Unit_Number": "3155",
-      "Status": "Expired / Not Current",
-      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -3999,27 +3964,13 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Pack",
       "Unit_Number": "3243",
       "Status": "Current >90 Days",
-      "Count": 6
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
-      "Unit_Number": "3243",
-      "Status": "Expires ≤30 Days",
-      "Count": 1
+      "Count": 9
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
       "Unit_Number": "3243",
       "Status": "Expires 31–60 Days",
-      "Count": 3
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Pack",
-      "Unit_Number": "3243",
-      "Status": "Expired / Not Current",
       "Count": 1
     },
     {
@@ -4032,16 +3983,16 @@ const PUBLIC_DASHBOARD_DATA={
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
-      "Unit_Number": "3329",
-      "Status": "Current >90 Days",
-      "Count": 11
+      "Unit_Number": "3243",
+      "Status": "Expires ≤30 Days",
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Pack",
       "Unit_Number": "3329",
-      "Status": "Expired / Not Current",
-      "Count": 1
+      "Status": "Current >90 Days",
+      "Count": 12
     },
     {
       "District": "Northern Lights 07",
@@ -4096,21 +4047,21 @@ const PUBLIC_DASHBOARD_DATA={
       "District": "Northern Lights 07",
       "Unit_Type": "Troop",
       "Unit_Number": "0029",
-      "Status": "Expired / Not Current",
-      "Count": 1
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Troop",
-      "Unit_Number": "0029",
       "Status": "Current >90 Days",
-      "Count": 9
+      "Count": 8
     },
     {
       "District": "Northern Lights 07",
       "Unit_Type": "Troop",
       "Unit_Number": "0029",
       "Status": "Expires ≤30 Days",
+      "Count": 1
+    },
+    {
+      "District": "Northern Lights 07",
+      "Unit_Type": "Troop",
+      "Unit_Number": "0029",
+      "Status": "Expires 61–90 Days",
       "Count": 1
     },
     {
@@ -4126,13 +4077,6 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Number": "0035",
       "Status": "Current >90 Days",
       "Count": 16
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Troop",
-      "Unit_Number": "0035",
-      "Status": "Expired / Not Current",
-      "Count": 2
     },
     {
       "District": "Northern Lights 07",
@@ -4230,14 +4174,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Troop",
       "Unit_Number": "0076",
       "Status": "Current >90 Days",
-      "Count": 10
-    },
-    {
-      "District": "Northern Lights 07",
-      "Unit_Type": "Troop",
-      "Unit_Number": "0076",
-      "Status": "Expired / Not Current",
-      "Count": 2
+      "Count": 12
     },
     {
       "District": "Northern Lights 07",
@@ -4307,7 +4244,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Troop",
       "Unit_Number": "0132",
       "Status": "Current >90 Days",
-      "Count": 15
+      "Count": 16
     },
     {
       "District": "Northern Lights 07",
@@ -4328,7 +4265,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Unit_Type": "Troop",
       "Unit_Number": "0132",
       "Status": "Expires ≤30 Days",
-      "Count": 2
+      "Count": 1
     },
     {
       "District": "Northern Lights 07",
@@ -4404,7 +4341,7 @@ const PUBLIC_DASHBOARD_DATA={
       "District": "Northern Lights 07",
       "Unit_Type": "Troop",
       "Unit_Number": "0167",
-      "Status": "Expires ≤30 Days",
+      "Status": "Expired / Not Current",
       "Count": 1
     },
     {
@@ -4547,7 +4484,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 26,
+      "Total_Youth": 28,
       "Total_Adults": 8
     },
     {
@@ -4569,7 +4506,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 30,
+      "Total_Youth": 33,
       "Total_Adults": 12
     },
     {
@@ -4591,8 +4528,8 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 37,
-      "Total_Adults": 15
+      "Total_Youth": 40,
+      "Total_Adults": 14
     },
     {
       "District": "Northern Lights 07",
@@ -4602,7 +4539,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 23,
+      "Total_Youth": 24,
       "Total_Adults": 15
     },
     {
@@ -4613,7 +4550,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 34,
+      "Total_Youth": 35,
       "Total_Adults": 12
     },
     {
@@ -4624,7 +4561,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 57,
+      "Total_Youth": 59,
       "Total_Adults": 12
     },
     {
@@ -4635,7 +4572,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 19,
+      "Total_Youth": 21,
       "Total_Adults": 5
     },
     {
@@ -4691,7 +4628,7 @@ const PUBLIC_DASHBOARD_DATA={
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
       "Total_Youth": 9,
-      "Total_Adults": 5
+      "Total_Adults": 4
     },
     {
       "District": "Northern Lights 07",
@@ -4702,7 +4639,7 @@ const PUBLIC_DASHBOARD_DATA={
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
       "Total_Youth": 15,
-      "Total_Adults": 9
+      "Total_Adults": 8
     },
     {
       "District": "Northern Lights 07",
@@ -4712,7 +4649,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 25,
+      "Total_Youth": 27,
       "Total_Adults": 10
     },
     {
@@ -4801,7 +4738,7 @@ const PUBLIC_DASHBOARD_DATA={
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
       "Total_Youth": 41,
-      "Total_Adults": 21
+      "Total_Adults": 19
     },
     {
       "District": "Northern Lights 07",
@@ -4833,7 +4770,7 @@ const PUBLIC_DASHBOARD_DATA={
       "Renewal_Status": "Posted",
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
-      "Total_Youth": 6,
+      "Total_Youth": 7,
       "Total_Adults": 10
     },
     {
@@ -4955,7 +4892,7 @@ const PUBLIC_DASHBOARD_DATA={
       "New_Separated_Rechartered": "",
       "Current_Expiry_Date": "12/31/2026",
       "Total_Youth": 29,
-      "Total_Adults": 11
+      "Total_Adults": 10
     },
     {
       "District": "Northern Lights 07",
@@ -5050,15 +4987,15 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 3,
       "youth_expires_60": 2,
-      "youth_expires_61_plus": 32,
-      "youth_current": 37,
+      "youth_expires_61_plus": 35,
+      "youth_current": 40,
       "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
       "adult_expires_30": 4,
       "adult_expires_60": 5,
-      "adult_expires_61_plus": 53,
-      "adult_current": 62
+      "adult_expires_61_plus": 50,
+      "adult_current": 59
     },
     {
       "districtname": "Northern Lights 07",
@@ -5104,8 +5041,8 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 18,
       "youth_expires_60": 2,
-      "youth_expires_61_plus": 6,
-      "youth_current": 26,
+      "youth_expires_61_plus": 8,
+      "youth_current": 28,
       "adult_expired": 2,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
@@ -5219,19 +5156,19 @@ const PUBLIC_DASHBOARD_DATA={
       "adult_expires_15": 0,
       "adult_expires_30": 0,
       "adult_expires_60": 1,
-      "adult_expires_61_plus": 16,
-      "adult_current": 17
+      "adult_expires_61_plus": 15,
+      "adult_current": 16
     },
     {
       "districtname": "Northern Lights 07",
       "unitname": "Pack 3145 (F)",
-      "youth_expired": 2,
+      "youth_expired": 1,
       "youth_expires_01": 0,
       "youth_expires_15": 0,
       "youth_expires_30": 1,
       "youth_expires_60": 1,
-      "youth_expires_61_plus": 9,
-      "youth_current": 11,
+      "youth_expires_61_plus": 10,
+      "youth_current": 12,
       "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
@@ -5271,10 +5208,10 @@ const PUBLIC_DASHBOARD_DATA={
       "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
-      "adult_expires_30": 1,
+      "adult_expires_30": 0,
       "adult_expires_60": 2,
       "adult_expires_61_plus": 8,
-      "adult_current": 11
+      "adult_current": 10
     },
     {
       "districtname": "Northern Lights 07",
@@ -5284,8 +5221,8 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 5,
       "youth_expires_60": 3,
-      "youth_expires_61_plus": 15,
-      "youth_current": 23,
+      "youth_expires_61_plus": 16,
+      "youth_current": 24,
       "adult_expired": 1,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
@@ -5302,14 +5239,14 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 13,
       "youth_expires_60": 1,
-      "youth_expires_61_plus": 42,
-      "youth_current": 56,
+      "youth_expires_61_plus": 44,
+      "youth_current": 58,
       "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
-      "adult_expires_30": 1,
+      "adult_expires_30": 0,
       "adult_expires_60": 0,
-      "adult_expires_61_plus": 24,
+      "adult_expires_61_plus": 25,
       "adult_current": 25
     },
     {
@@ -5320,15 +5257,15 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 8,
       "youth_expires_60": 6,
-      "youth_expires_61_plus": 20,
-      "youth_current": 34,
-      "adult_expired": 1,
+      "youth_expires_61_plus": 21,
+      "youth_current": 35,
+      "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
       "adult_expires_30": 1,
       "adult_expires_60": 0,
-      "adult_expires_61_plus": 14,
-      "adult_current": 15
+      "adult_expires_61_plus": 15,
+      "adult_current": 16
     },
     {
       "districtname": "Northern Lights 07",
@@ -5338,8 +5275,8 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 13,
       "youth_expires_60": 1,
-      "youth_expires_61_plus": 14,
-      "youth_current": 28,
+      "youth_expires_61_plus": 17,
+      "youth_current": 31,
       "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
@@ -5356,8 +5293,8 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 12,
       "youth_expires_60": 0,
-      "youth_expires_61_plus": 13,
-      "youth_current": 25,
+      "youth_expires_61_plus": 15,
+      "youth_current": 27,
       "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
@@ -5392,15 +5329,15 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 9,
       "youth_expires_60": 2,
-      "youth_expires_61_plus": 8,
-      "youth_current": 19,
+      "youth_expires_61_plus": 10,
+      "youth_current": 21,
       "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
-      "adult_expires_30": 1,
+      "adult_expires_30": 7,
       "adult_expires_60": 0,
       "adult_expires_61_plus": 6,
-      "adult_current": 7
+      "adult_current": 13
     },
     {
       "districtname": "Northern Lights 07",
@@ -5433,10 +5370,10 @@ const PUBLIC_DASHBOARD_DATA={
       "adult_expired": 2,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
-      "adult_expires_30": 6,
+      "adult_expires_30": 0,
       "adult_expires_60": 0,
       "adult_expires_61_plus": 10,
-      "adult_current": 16
+      "adult_current": 10
     },
     {
       "districtname": "Northern Lights 07",
@@ -5452,9 +5389,9 @@ const PUBLIC_DASHBOARD_DATA={
       "adult_expires_01": 0,
       "adult_expires_15": 0,
       "adult_expires_30": 0,
-      "adult_expires_60": 4,
-      "adult_expires_61_plus": 41,
-      "adult_current": 45
+      "adult_expires_60": 3,
+      "adult_expires_61_plus": 40,
+      "adult_current": 43
     },
     {
       "districtname": "Northern Lights 07",
@@ -5536,8 +5473,8 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_15": 0,
       "youth_expires_30": 0,
       "youth_expires_60": 0,
-      "youth_expires_61_plus": 6,
-      "youth_current": 6,
+      "youth_expires_61_plus": 7,
+      "youth_current": 7,
       "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
@@ -5664,13 +5601,13 @@ const PUBLIC_DASHBOARD_DATA={
       "youth_expires_60": 0,
       "youth_expires_61_plus": 24,
       "youth_current": 25,
-      "adult_expired": 1,
+      "adult_expired": 0,
       "adult_expires_01": 0,
       "adult_expires_15": 0,
       "adult_expires_30": 2,
       "adult_expires_60": 1,
-      "adult_expires_61_plus": 62,
-      "adult_current": 65
+      "adult_expires_61_plus": 63,
+      "adult_current": 66
     },
     {
       "districtname": "Northern Lights 07",
