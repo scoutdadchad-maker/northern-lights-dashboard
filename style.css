@@ -94,3 +94,5 @@ th.sortable-th[aria-sort="ascending"],th.sortable-th[aria-sort="descending"]{col
 .membership-record-strip span{font-size:10px;color:var(--muted);line-height:1.25}.membership-record-strip b{font-size:15px;color:#dcebf7}
 .membership-accuracy-note{margin:0;color:var(--muted);font-size:10px;line-height:1.45;border-left:2px solid #3977a8;padding-left:9px}
 @media(max-width:650px){.membership-headline-grid,.membership-record-strip{grid-template-columns:1fr}}
+
+.priority-indicator.tone-blue{background-color:#07131e!important;background-image:linear-gradient(90deg,#0b2035,#08131e);border-color:#1d4365}
