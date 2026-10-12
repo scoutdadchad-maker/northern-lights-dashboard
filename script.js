@@ -94,7 +94,7 @@ function renderCommissioners(){
  }))
 }
 
-function renderAll(){renderOverview();renderMetrics();renderMembership();renderTraining();renderSyt();renderCharter();renderCommissioners();updateScopeLabel()}
+function renderAll(){renderCommissioners();renderOverview();renderMetrics();renderMembership();renderTraining();renderSyt();renderCharter();renderCommissioners();updateScopeLabel()}
 function refresh(){populateScope();let any=metrics.length||charters.length||membership.length||leaders.length||syt.length;$('emptyState').hidden=!!any;if(any){showView(activeView);renderAll()}$('metaDate').textContent=reportDates.length?`Report date: ${reportDates[reportDates.length-1]}`:''}
 async function loadFile(e,type){let f=e.target.files[0];if(!f)return;try{let text=await f.text(),p;if(type==='metrics'){p=parseReport(text,'Council_Name,District_Name');metrics=p.rows.map(normMetric).filter(x=>x.district===TARGET_DISTRICT);$('metricsStatus').textContent=`${metrics.length} Northern Lights units`}if(type==='training'){p=parseReport(text,'Council,Service_Area,District,Sub_District,Unit');leaders=p.rows.map(normLeader).filter(x=>x.district===TARGET_DISTRICT);$('trainingStatus').textContent=`${leaders.length} Northern Lights records`}if(type==='syt'){p=parseReport(text,'district,unittype,unitnumber');syt=p.rows.map(normSyt).filter(x=>x.district===TARGET_DISTRICT);$('sytStatus').textContent=`${syt.length} Northern Lights records`}if(type==='charter'){p=parseReport(text,'Service_Territory,Council,District,Unit_ID');charters=p.rows.map(normCharter).filter(x=>x.district===TARGET_DISTRICT);$('charterStatus').textContent=`${charters.length} Northern Lights units`}if(type==='membership'){p=parseReport(text,'councilname,subcouncilname,districtname');membership=p.rows.map(normMembership).filter(x=>x.district===TARGET_DISTRICT);$('membershipStatus').textContent=`${membership.length} Northern Lights units`}if(p.meta.date)reportDates.push(p.meta.date);refresh()}catch(err){alert(err.message)}}
 if(MODE==='admin'){['metrics','training','syt','charter','membership'].forEach(t=>$(t+'File').addEventListener('change',e=>loadFile(e,t)))}
@@ -147,6 +147,6 @@ function initSortableTables(){
 }
 initSortableTables();
 
-showView('overview');hydrateViewer();
+renderCommissioners();showView('overview');hydrateViewer();
 setDashboardUpdatedDate();
 // updated-date-init
